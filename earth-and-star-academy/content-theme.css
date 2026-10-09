@@ -7,3 +7,29 @@ main>section:not(.statement){padding:80px 0}h2{font-size:clamp(30px,4vw,46px);li
 #tutoring{background:var(--earth-canvas);color:var(--ink)}.split{display:grid;grid-template-columns:1fr 1.2fr;gap:42px}.rows{width:100%;border-collapse:collapse;background:white;border-radius:16px;overflow:hidden}.rows th,.rows td{text-align:left;padding:18px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.6}.rows th{color:#475467}.rows small{display:block;color:#667085;margin-top:8px}.rows .num{text-align:right;white-space:nowrap}#earthbound{background:linear-gradient(90deg,rgba(19,57,38,.9),rgba(19,57,38,.93)),url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=85") center/cover;color:white}#earthbound .lead{color:#effaf2}#earthbound .rows{color:#171717}
 #teacher{background:#f5f2eb;color:var(--ink)}.teacher{display:grid;grid-template-columns:1fr 1.2fr;gap:42px}.creds{list-style:none;margin:0;padding:24px;background:white;border:1px solid var(--line);border-radius:22px}.creds li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.65}.creds li:last-child{border:0}#teacher .promise{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:34px}.promise li{line-height:1.7;margin-bottom:10px}.enroll{background:var(--star-deep)}.steps{padding-left:24px;max-width:760px;color:#cbd5e1}.steps li{line-height:1.8;margin:14px 0}.enroll .btn{margin-top:18px}footer{background:var(--star-deep);padding:30px 0;border-top:1px solid #ffffff14;color:#98a2b3;font-size:13px}.navlinks{gap:14px;font-size:13px}
 @media(max-width:900px){.pair,.days,.teacher,.split,#teacher .promise{grid-template-columns:1fr}.who{grid-template-columns:1fr}.nav{height:auto;min-height:70px;padding:12px 0}.heroPanel{padding:64px 24px}.navlinks{display:none}}@media(max-width:620px){main>section:not(.statement){padding:52px 0}.feature,.day{padding:22px}.facts{grid-template-columns:60px 1fr;gap:8px}.rows th,.rows td{padding:12px}.rows .num{white-space:normal}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Earthbound workshops and chef */
+.workshopGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:32px}
+.workshop{color:var(--ink);display:flex;flex-direction:column}
+.workshop h3{color:var(--earth-leaf)}
+.workshop .facts{margin:0 0 6px}
+.workshop .btn{margin-top:auto;align-self:flex-start}
+.workshop .courseOutline{margin:14px 0 20px}
+.retreat{grid-column:1/-1;border:2px solid var(--earth-sprout)}
+.newTag{align-self:flex-start;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;background:#e3f4ea;color:var(--earth-fern);padding:6px 10px;border-radius:999px;margin-bottom:12px}
+.earthBtn{background:var(--earth-leaf)}
+.earthFacts{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;color:#effaf2;line-height:1.6}
+.earthFacts li{border-left:3px solid var(--earth-sprout);padding-left:14px}
+.chef{background:#f5f2eb;color:var(--ink)}
+#chef h2,#chef h3{font-family:Georgia,serif}
+#chef h3{margin-top:26px}
+@media(max-width:900px){.workshopGrid,.earthFacts{grid-template-columns:1fr}}
+.earthSteps{margin:28px 0 0;padding-left:22px;color:#effaf2;line-height:1.7;max-width:760px}.earthSteps li{margin:8px 0}
+main section[id]{scroll-margin-top:80px}
+
+/* Community */
+.community{background:var(--earth-canvas);color:var(--ink)}
+#community h2,#community h3{font-family:Georgia,serif}
+#community .who h3{color:var(--earth-leaf)}
+.involve{margin-top:34px;background:white;border:1px solid var(--line);border-left:4px solid var(--earth-sprout);border-radius:0 22px 22px 0;padding:26px 28px}
+.involve p{color:#667085}
