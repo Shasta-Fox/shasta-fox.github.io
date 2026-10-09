@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Earth &amp; Star Academy</title>
+<meta name="description" content="Online classes in algebra, writing, and the history of ideas, and hands-on food and garden workshops in Keaʻau, Hawaiʻi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;0,800;1,400&family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2316203A'/%3E%3Cpath d='M0 22 Q16 16 32 22 V32 H0Z' fill='%233E6A3F'/%3E%3Ccircle cx='16' cy='10' r='2.4' fill='%23EDE3C4'/%3E%3C/svg%3E">
+<style>
+:root{
+  --night:#16203A; --night-2:#1E2B4A; --star:#EDE3C4; --star-dim:#B9B29A;
+  --kalo:#3E6A3F; --kalo-deep:#2C4D2E; --basalt:#2A2A2E; --lehua:#B8323A;
+  --paper:#F4F6F3; --line:#D5DAD3; --muted:#5B6158;
+  --serif:"Alegreya",Georgia,serif; --sans:"Alegreya Sans","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--basalt);font-family:var(--serif);font-size:1.125rem;line-height:1.6}
+a{color:var(--kalo-deep)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--lehua);outline-offset:3px;border-radius:4px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+.prose{max-width:38rem}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;margin:0 0 .5em;font-weight:700}
+h2{font-size:clamp(1.8rem,3.4vw,2.6rem)}
+h3{font-size:1.35rem}
+p{margin:0 0 1em}
+.sans{font-family:var(--sans)}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:#fff;padding:.5rem 1rem;z-index:10}
+
+/* header + hero: the night sky */
+.sky{background:var(--night);color:var(--star);position:relative;overflow:hidden}
+.sky canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+nav{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.1rem 0;font-family:var(--sans)}
+.brand{white-space:nowrap;color:var(--star);text-decoration:none;font-family:var(--serif);font-weight:700;font-size:1.25rem}
+.navlinks{display:flex;gap:1.25rem;flex-wrap:wrap}
+.navlinks a{color:var(--star);text-decoration:none;font-size:1rem}
+.navlinks a:hover{text-decoration:underline}
+.hero{position:relative;z-index:2;padding:4.5rem 0 7.5rem}
+.hero h1{font-size:clamp(2.6rem,7vw,5.2rem);font-weight:800;letter-spacing:-.01em;max-width:12ch}
+.hero p{font-size:1.3rem;max-width:34rem;color:#E4DDC4}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
+.btn{font-family:var(--sans);font-weight:700;font-size:1.05rem;padding:.8rem 1.3rem;border-radius:999px;text-decoration:none;display:inline-block}
+.btn-star{background:var(--star);color:var(--night)}
+.btn-ghost{color:var(--star);border:1.5px solid rgba(237,227,196,.55)}
+.btn-ghost:hover{border-color:var(--star)}
+.horizon{position:relative;z-index:1;display:block;width:100%;height:70px;margin-top:-70px}
+
+/* sections */
+section{padding:4.5rem 0}
+.lead{font-size:1.25rem;color:var(--muted)}
+.new{background:var(--kalo);color:#F1F4EC;padding-top:2.5rem}
+.new h2{color:#fff}
+.pair{display:grid;grid-template-columns:1.15fr 1fr;gap:2.5rem;margin-top:2rem}
+.feature{border-top:2px solid rgba(255,255,255,.35);padding-top:1.25rem}
+.feature h3{font-size:1.7rem;color:#fff}
+.facts{font-family:var(--sans);display:grid;grid-template-columns:auto 1fr;gap:.25rem 1.25rem;margin:1.25rem 0 1.5rem;font-size:1.02rem}
+.facts dt{color:#C9D8C3}
+.facts dd{margin:0;color:#fff}
+.new .btn{background:#fff;color:var(--kalo-deep)}
+
+/* constellation timeline */
+.ideas{background:var(--night);color:var(--star)}
+.ideas .lead{color:#CFC8AE}
+.ideas h2{color:#fff}
+.constellation{list-style:none;margin:3rem 0 0;padding:0;position:relative}
+.constellation::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:1.5px;background:linear-gradient(var(--star),rgba(237,227,196,.25))}
+.constellation li{position:relative;padding:0 0 2.4rem 3rem}
+.constellation li::before{content:"";position:absolute;left:4px;top:.45rem;width:16px;height:16px;border-radius:50%;background:var(--star);box-shadow:0 0 0 5px rgba(237,227,196,.14),0 0 18px rgba(237,227,196,.55)}
+.constellation li:last-child::before{background:var(--lehua);box-shadow:0 0 0 5px rgba(184,50,58,.2),0 0 18px rgba(184,50,58,.6)}
+.era{font-family:var(--sans);color:var(--star-dim);font-size:1rem;display:block;margin-bottom:.15rem}
+.constellation h3{color:#fff;margin-bottom:.3rem}
+.constellation p{max-width:40rem;margin:0 0 .4rem;color:#E6E0CC}
+.read{font-family:var(--sans);font-size:1rem;color:var(--star-dim)}
+.read em{font-family:var(--serif);color:#E6E0CC}
+.note-box{border-left:3px solid var(--star);padding:.25rem 0 .25rem 1.25rem;max-width:42rem;color:#E6E0CC;margin-top:.5rem}
+
+/* algebra weekend */
+.days{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:2rem;border:1.5px solid var(--basalt);border-radius:14px;overflow:hidden;background:#fff}
+.day{padding:1.6rem 1.75rem}
+.day+.day{border-left:1.5px solid var(--basalt)}
+.day h3{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.day h3 span{font-family:var(--sans);font-weight:500;font-size:1rem;color:var(--muted)}
+.day ol{margin:.5rem 0 0;padding-left:1.3rem}
+.day li{margin-bottom:.45rem}
+.who{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.5rem}
+.who h3{font-size:1.15rem}
+.who p{font-size:1.05rem;color:var(--muted)}
+
+/* price tables */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.rows{width:100%;border-collapse:collapse;font-size:1.05rem;margin-top:1rem}
+.rows th,.rows td{text-align:left;padding:.85rem .5rem .85rem 0;border-bottom:1px solid var(--line);vertical-align:top}
+.rows th{font-family:var(--sans);font-weight:500;color:var(--muted);font-size:.95rem}
+.rows td.num{font-family:var(--sans);white-space:nowrap;text-align:right;padding-right:0}
+.rows th.num{text-align:right;padding-right:0}
+.rows small{display:block;color:var(--muted);font-family:var(--sans);font-size:.92rem;margin-top:.15rem}
+.earth{background:#E7ECE3}
+
+/* teacher + honesty */
+.teacher{display:grid;grid-template-columns:1fr 1.2fr;gap:3rem;align-items:start}
+.creds{list-style:none;padding:0;margin:0;font-size:1.05rem}
+.creds li{padding:.6rem 0;border-bottom:1px solid var(--line)}
+.promise{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:1.5rem}
+.promise ul{padding-left:1.2rem;margin:0}
+.promise li{margin-bottom:.55rem}
+.promise h3{font-size:1.2rem}
+
+/* enroll */
+.enroll{background:var(--basalt);color:#EEE}
+.enroll h2{color:#fff}
+.steps{counter-reset:s;list-style:none;padding:0;margin:1.5rem 0 2rem;max-width:40rem}
+.steps li{counter-increment:s;padding-left:2.6rem;position:relative;margin-bottom:1rem}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--star);color:var(--night);font-family:var(--sans);font-weight:700;display:grid;place-items:center;font-size:1rem}
+.enroll .btn{background:var(--star);color:var(--night)}
+footer{background:var(--night);color:var(--star-dim);font-family:var(--sans);font-size:.98rem;padding:2rem 0}
+footer a{color:var(--star)}
+
+@media (max-width:800px){
+  .pair,.split,.teacher,.promise,.who{grid-template-columns:1fr}
+  .days{grid-template-columns:1fr}
+  .day+.day{border-left:0;border-top:1.5px solid var(--basalt)}
+  .hero{padding:3rem 0 6rem}
+  nav{flex-direction:column;align-items:flex-start;gap:.6rem}
+  .navlinks{gap:.4rem 1rem}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="sky">
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="brand" href="#">Earth &amp; Star Academy</a>
+      <div class="navlinks">
+        <a href="#algebra">Algebra weekend</a>
+        <a href="#ideas">Socrates to Kuhn</a>
+        <a href="#tutoring">Tutoring</a>
+        <a href="#earthbound">Earthbound</a>
+        <a href="#enroll">Enroll</a>
+      </div>
+    </nav>
+    <div class="hero">
+      <h1>Learn by the stars and by the soil.</h1>
+      <p>Small online classes in algebra, writing, and the history of ideas. Hands-on food and garden workshops in Keaʻau, Hawaiʻi. One teacher, small groups, and plain explanations.</p>
+      <div class="btns">
+        <a class="btn btn-star" href="#new">See this season's classes</a>
+        <a class="btn btn-ghost" href="#enroll">How to enroll</a>
+      </div>
+    </div>
+  </div>
+  <svg class="horizon" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 V44 C360 6 1080 6 1440 44 V70 Z" fill="#3E6A3F"/></svg>
+</header>
+
+<main id="main">
+
+<section class="new" id="new">
+  <div class="wrap">
+    <h2>New this season</h2>
+    <p class="lead" style="color:#DCE6D6">Two short courses. Both run live online, so you can join from anywhere.</p>
+    <div class="pair">
+      <article class="feature">
+        <h3>Algebra Demystified</h3>
+        <p>One weekend, six hours, and every step explained. For anyone who was told they are "not a math person" and wants a second try.</p>
+        <dl class="facts">
+          <dt>When</dt><dd>Saturday and Sunday, November 7–8, 2026</dd>
+          <dt>Time</dt><dd>12:00–3:00 p.m. Central (8:00–11:00 a.m. Hawaiʻi)</dd>
+          <dt>Where</dt><dd>Live online, video on or off</dd>
+          <dt>Group</dt><dd>Up to 8 learners</dd>
+          <dt>Cost</dt><dd>$120 for the weekend</dd>
+        </dl>
+        <a class="btn" href="#algebra">See the weekend plan</a>
+      </article>
+      <article class="feature">
+        <h3>From Socrates to Kuhn</h3>
+        <p>A crash course in Western thought: how people in one tradition argued about knowledge, truth, and science across 2,400 years.</p>
+        <dl class="facts">
+          <dt>When</dt><dd>Six Tuesdays, November 3 – December 8, 2026</dd>
+          <dt>Time</dt><dd>6:30–8:00 p.m. Central (2:30–4:00 p.m. Hawaiʻi)</dd>
+          <dt>Where</dt><dd>Live online</dd>
+          <dt>Group</dt><dd>Up to 12 learners</dd>
+          <dt>Cost</dt><dd>$150 for all six sessions</dd>
+        </dl>
+        <a class="btn" href="#ideas">See the six sessions</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="algebra">
+  <div class="wrap">
+    <div class="prose">
+      <h2>Algebra Demystified</h2>
+      <p class="lead">Algebra is arithmetic with a placeholder. Once you see that, the rules stop looking arbitrary. This weekend covers the core of Algebra I, one idea at a time, with practice after each one.</p>
+    </div>
+    <div class="days">
+      <div class="day">
+        <h3>Saturday <span>Equations</span></h3>
+        <ol>
+          <li>Warm-up review: negative numbers and fractions</li>
+          <li>Variables and expressions: what a letter stands for</li>
+          <li>Order of operations, and why it exists</li>
+          <li>Solving one-step and two-step equations</li>
+          <li>Equations with the variable on both sides</li>
+        </ol>
+      </div>
+      <div class="day">
+        <h3>Sunday <span>Lines and problems</span></h3>
+        <ol>
+          <li>Inequalities and number lines</li>
+          <li>Graphing a line: slope and y-intercept</li>
+          <li>Systems of two equations</li>
+          <li>Turning word problems into equations</li>
+          <li>Open questions and a practice plan for the next month</li>
+        </ol>
+      </div>
+    </div>
+    <div class="who">
+      <div><h3>Who it is for</h3><p>Adults returning to school, learners preparing for a placement test or the GED, teens who need a reset, and parents who want to help with homework.</p></div>
+      <div><h3>What you need</h3><p>Comfort with basic arithmetic, a pencil, and a notebook. A calculator is optional. We review negatives and fractions in the first hour.</p></div>
+      <div><h3>What you take home</h3><p>A one-page reference sheet and a practice set with fully worked answers, so you can check every step on your own.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ideas" id="ideas">
+  <div class="wrap">
+    <div class="prose">
+      <h2>From Socrates to Kuhn</h2>
+      <p class="lead">Six evenings, six turning points. Each session pairs a short primary reading with a discussion of one question: how do we know what we claim to know?</p>
+    </div>
+    <ol class="constellation">
+      <li>
+        <span class="era">Athens, 5th–4th century BCE</span>
+        <h3>Socrates and Plato: knowledge through questions</h3>
+        <p>Socrates claimed to know only that he knew nothing. Plato built on his method and argued that true knowledge concerns unchanging forms, not shifting appearances.</p>
+        <span class="read">Reading: Plato, <em>Apology</em> and the allegory of the cave (<em>Republic</em>, Book VII)</span>
+      </li>
+      <li>
+        <span class="era">4th century BCE to 13th century</span>
+        <h3>Aristotle to Aquinas: logic, observation, and faith</h3>
+        <p>Aristotle grounded knowledge in observation and formal logic. His work reached medieval Europe largely through Arabic translations and commentators such as Ibn Rushd, and Thomas Aquinas joined it to Christian theology.</p>
+        <span class="read">Reading: Aristotle, <em>Nicomachean Ethics</em>, Book I (excerpt); Aquinas, the five ways (excerpt)</span>
+      </li>
+      <li>
+        <span class="era">1600s</span>
+        <h3>Bacon, Galileo, Descartes, Newton: the search for method</h3>
+        <p>The scientific revolution replaced appeals to authority with experiment and mathematics. Descartes tried to rebuild all knowledge from a single certainty.</p>
+        <span class="read">Reading: Descartes, <em>Discourse on Method</em>, Part II</span>
+      </li>
+      <li>
+        <span class="era">1700s</span>
+        <h3>Hume and Kant: what experience can prove</h3>
+        <p>Hume showed that no number of observations proves a general law. Kant answered that the mind itself supplies the structure of experience.</p>
+        <span class="read">Reading: Hume, <em>An Enquiry Concerning Human Understanding</em>, Section IV; Kant, "What Is Enlightenment?" (1784)</span>
+      </li>
+      <li>
+        <span class="era">1800s</span>
+        <h3>Mill, Marx, Darwin, Nietzsche: liberty, power, and change</h3>
+        <p>Four thinkers turned the question toward society and history: free debate, economic power, natural selection, and the origin of values.</p>
+        <span class="read">Reading: Mill, <em>On Liberty</em>, Chapter 2; Marx and Engels, <em>The Communist Manifesto</em>, Part I</span>
+      </li>
+      <li>
+        <span class="era">1934–1962</span>
+        <h3>Popper and Kuhn: how science changes</h3>
+        <p>Popper argued that a scientific claim must be testable and open to refutation. Kuhn argued that science moves through paradigms and occasional revolutions, not a steady pile-up of facts.</p>
+        <span class="read">Reading: Popper, "Science: Conjectures and Refutations" (excerpt); Kuhn, <em>The Structure of Scientific Revolutions</em> (1962), excerpt</span>
+      </li>
+    </ol>
+    <p class="note-box">This course follows one tradition. It is not the only tradition of rigorous thought, and it did not develop alone. Where Western thinkers drew on Islamic, Indian, Chinese, African, or Indigenous scholarship, the course says so.</p>
+  </div>
+</section>
+
+<section id="tutoring">
+  <div class="wrap split">
+    <div class="prose">
+      <h2>Star Learning tutoring</h2>
+      <p class="lead">One-on-one online sessions. Each session is 50 minutes and costs $30.</p>
+      <p>Sessions are available in English or Spanish.</p>
+    </div>
+    <table class="rows">
+      <thead><tr><th>Subject</th><th>What we work on</th></tr></thead>
+      <tbody>
+        <tr><td>Math</td><td>Elementary math through Algebra I</td></tr>
+        <tr><td>Writing coaching</td><td>Sentence structure, essays, revision, and academic writing</td></tr>
+        <tr><td>English and language arts</td><td>Reading, grammar, vocabulary, comprehension, pronunciation, and English-language learning</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="earth" id="earthbound">
+  <div class="wrap split">
+    <div class="prose">
+      <h2>Earthbound workshops</h2>
+      <p class="lead">In person in Keaʻau, Hawaiʻi. Cooking, baking, and gardening are skills you practice with your hands, so these classes meet in the kitchen and the garden.</p>
+    </div>
+    <table class="rows">
+      <thead><tr><th>Workshop</th><th class="num">Cost</th></tr></thead>
+      <tbody>
+        <tr><td>Foundational Culinary Arts<small>Six weeks, 2.5 hours a week. Part 1: kitchen safety, knife skills, stocks, basic methods. Part 2: French foundations, sauces, and emulsions.</small></td><td class="num">$450</td></tr>
+        <tr><td>Plant-Based Culinary Arts<small>Six weeks, 2.5 hours a week. Vegetables, legumes, grains, umami, and vegan cheese, with attention to allergens.</small></td><td class="num">$450</td></tr>
+        <tr><td>The Art of Bread Making<small>Six weeks, 2 hours a week. Mixing through baking, with an introduction to sourdough.</small></td><td class="num">$390</td></tr>
+        <tr><td>The Way of Herbs<small>90 minutes. Identifying, growing, and preparing culinary herbs.</small></td><td class="num">$35</td></tr>
+        <tr><td>Puna Gardening<small>2 hours. Soil building, raised beds, and tropical crops.</small></td><td class="num">$40</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="teacher">
+  <div class="wrap teacher">
+    <div>
+      <h2>Your teacher</h2>
+      <p class="lead">Shasta L. Fox teaches every class at Earth &amp; Star.</p>
+    </div>
+    <ul class="creds">
+      <li>Master of Arts in Interdisciplinary Studies, with concentrations in writing and English, Western New Mexico University (2019)</li>
+      <li>Bachelor of Arts in History, with a minor in Spanish, University of Arizona (2012)</li>
+      <li>Doctoral student in Marriage and Family Therapy (Ph.D.), Amridge University</li>
+      <li>Doctoral coursework in Transformative Social Change, Saybrook University</li>
+      <li>Graduate coursework in social work at Western New Mexico University, including group work, cultural competence, and supervision</li>
+      <li>Graduate study in the humanities and aesthetics, with written studies of Plato's <em>Republic</em>, Aristotle's <em>Poetics</em>, Plotinus, Kant, and Schiller</li>
+      <li>Teaches middle-school planetary science</li>
+      <li>More than 20 years of work in human services: elder care, nutrition programs, and community outreach</li>
+      <li>Bilingual in English and Spanish, with a background in Indigenous studies</li>
+    </ul>
+  </div>
+  <div class="wrap">
+    <div class="promise">
+      <div>
+        <h3>What you can expect</h3>
+        <ul>
+          <li>Every step explained, and every question treated as a fair question.</li>
+          <li>A written plan for each class before it starts, so you know what it covers.</li>
+          <li>Practice with worked answers, not answers alone.</li>
+          <li>A full refund if you cancel at least 48 hours before the first session.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What we do not claim</h3>
+        <ul>
+          <li>Earth &amp; Star is an independent academy. Classes do not carry college credit or accreditation.</li>
+          <li>No class guarantees a grade, a test score, or a job.</li>
+          <li>Tutoring is education, not therapy or counseling.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="enroll" id="enroll">
+  <div class="wrap">
+    <h2>How to enroll</h2>
+    <ol class="steps">
+      <li>Email the academy with the class name and your preferred time zone.</li>
+      <li>You receive a confirmation, a payment link, and the class plan within two days.</li>
+      <li>Your seat is held once payment arrives. The video link comes the day before class.</li>
+    </ol>
+    <a class="btn" id="mail" href="mailto:shastaandziggy@gmail.com?subject=Earth%20%26%20Star%20enrollment">Email to enroll</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Earth &amp; Star Academy. Online and in Keaʻau, Hawaiʻi.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var c=document.getElementById('stars'); if(!c||!c.getContext) return;
+  var x=c.getContext('2d'), still=window.matchMedia('(prefers-reduced-motion: reduce)').matches, pts=[], t0=null;
+  function seed(n){var s=n;return function(){s=(s*9301+49297)%233280;return s/233280;};}
+  function size(){
+    var r=c.getBoundingClientRect(), d=window.devicePixelRatio||1;
+    c.width=r.width*d; c.height=r.height*d; x.setTransform(d,0,0,d,0,0);
+    var rnd=seed(7), n=Math.round(r.width*r.height/5200); pts=[];
+    for(var i=0;i<n;i++) pts.push({x:rnd()*r.width,y:rnd()*r.height*0.88,r:rnd()<0.08?1.6:0.5+rnd()*0.8,a:0.35+rnd()*0.65,d:rnd()*900});
+    draw(still?1e9:0);
+  }
+  function draw(ms){
+    var r=c.getBoundingClientRect(); x.clearRect(0,0,r.width,r.height);
+    for(var i=0;i<pts.length;i++){var p=pts[i],k=Math.max(0,Math.min(1,(ms-p.d)/700));
+      x.globalAlpha=p.a*k; x.fillStyle='#EDE3C4'; x.beginPath(); x.arc(p.x,p.y,p.r,0,6.283); x.fill();}
+  }
+  function loop(ts){ if(t0===null)t0=ts; var ms=ts-t0; draw(ms); if(ms<1700) requestAnimationFrame(loop); }
+  size(); window.addEventListener('resize',function(){size();});
+  if(!still){ requestAnimationFrame(loop); setTimeout(function(){draw(1e9);},1800); }
+})();
+</script>
+</body>
+</html>
