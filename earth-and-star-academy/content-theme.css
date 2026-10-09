@@ -33,3 +33,62 @@ main section[id]{scroll-margin-top:80px}
 #community .who h3{color:var(--earth-leaf)}
 .involve{margin-top:34px;background:white;border:1px solid var(--line);border-left:4px solid var(--earth-sprout);border-radius:0 22px 22px 0;padding:26px 28px}
 .involve p{color:#667085}
+
+/* Chef showcase */
+.chefShow{background:radial-gradient(900px 420px at 85% 0%,rgba(82,183,136,.20),transparent 60%),linear-gradient(140deg,var(--earth-soil) 0%,#1d2a1b 45%,var(--earth-fern) 100%);color:#fff}
+.chefHead{display:grid;grid-template-columns:1.5fr .9fr;gap:40px;align-items:center}
+.chefShow .kicker{color:#c8f4d7}
+.chefShow h2{font-family:Georgia,serif;font-size:clamp(40px,6vw,68px);line-height:1.02;letter-spacing:-.02em;margin:12px 0 18px}
+.chefLead{font-size:19px;line-height:1.7;color:#e6efe7;max-width:640px}
+.monogram{justify-self:center;width:min(280px,70vw);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,rgba(255,255,255,.18),transparent 55%),linear-gradient(135deg,var(--earth-leaf),var(--earth-fern) 55%,var(--earth-soil));border:1px solid rgba(255,255,255,.18);box-shadow:0 0 0 10px rgba(82,183,136,.10),0 30px 80px rgba(0,0,0,.45)}
+.monogram span{font-family:Georgia,serif;font-size:clamp(64px,9vw,104px);letter-spacing:.04em;color:#f3fbf5}
+.credTiles{list-style:none;padding:0;margin:48px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.credTiles li{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.credBig{font-family:Georgia,serif;font-size:clamp(26px,3vw,36px);line-height:1.05;color:#a8e6c1}
+.credText{color:#dce6d6;line-height:1.55;font-size:15px}
+.chefWork{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:40px;padding-top:34px;border-top:1px solid rgba(255,255,255,.12)}
+.chefWork h3{font-family:Georgia,serif;font-size:20px;color:#fff}
+.chefWork p{color:#cfdccf;font-size:15px}
+.chefAlso{margin:22px 0 0;color:#cfdccf}
+.chefAlso a,.chefShow .inlineLink{color:#a8e6c1;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.inlineLink{font-weight:800;text-decoration:underline;text-underline-offset:3px}
+#earthbound .lead .inlineLink{color:#c8f4d7}
+.workshop .inlineLink{color:var(--earth-leaf)}
+#teacher .inlineLink{color:var(--earth-leaf)}
+#ask-chef h2{font-family:Georgia,serif}
+@media(max-width:900px){.chefHead{grid-template-columns:1fr}.chefPhoto{order:-1;justify-self:stretch;width:100%;max-width:460px}.credTiles,.chefWork{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.credTiles,.chefWork{grid-template-columns:1fr}}
+.chefPhoto{margin:0;justify-self:end;width:min(400px,100%)}
+.chefPhoto img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:28px;border:1px solid rgba(255,255,255,.18);box-shadow:0 0 0 10px rgba(82,183,136,.10),0 30px 80px rgba(0,0,0,.45)}
+
+/* Chef showcase: editorial refinement */
+.chefShow{background:linear-gradient(160deg,#17130e 0%,#14201a 50%,#0f2a1c 100%)}
+.chefShow>.wrap{padding-top:12px;padding-bottom:12px}
+.chefHead{gap:64px}
+.chefShow .kicker{font-size:11px;letter-spacing:.28em;color:#9fc7ae;font-weight:700}
+.chefShow h2{font-weight:400;letter-spacing:-.01em;margin:16px 0 0}
+.chefRule{display:block;width:56px;height:1px;background:#9fc7ae;margin:26px 0 24px}
+.chefLead{font-size:18px;color:#d9e3da;font-weight:400}
+.chefShow .btns{margin-top:30px}
+.chefPhoto{position:relative;width:min(380px,100%)}
+.chefPhoto:before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid rgba(159,199,174,.45);border-radius:4px;pointer-events:none}
+.chefPhoto img{position:relative;border-radius:4px;border:0;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.chefPhoto figcaption{position:relative;margin-top:30px;font-family:Georgia,serif;font-style:italic;font-size:14px;color:#9fc7ae;text-align:right}
+.credTiles{gap:0;margin-top:64px;border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)}
+.credTiles li{background:none;border:0;border-radius:0;padding:28px 26px;border-left:1px solid rgba(255,255,255,.12)}
+.credTiles li:first-child{border-left:0;padding-left:0}
+.credBig{font-weight:400;color:#e9f3ec;font-size:clamp(24px,2.6vw,32px)}
+.credText{color:#a9bcae;font-size:14px}
+.chefWork{border-top:0;margin-top:44px;padding-top:0;gap:36px}
+.chefWork h3{font-weight:400;font-size:19px;color:#e9f3ec;padding-top:14px;border-top:1px solid #9fc7ae;display:inline-block}
+.chefWork p{color:#b4c4b7}
+.chefAlso{margin-top:36px;font-family:Georgia,serif;font-style:italic;color:#b4c4b7}
+.chefAlso a{font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-style:normal}
+@media(max-width:900px){.chefHead{gap:48px}.chefPhoto{width:calc(100% - 18px)}.credTiles li{border-left:0;border-top:1px solid rgba(255,255,255,.12);padding:22px 0}.credTiles li:nth-child(-n+2){border-top:0}.credTiles{column-gap:24px}}
+@media(max-width:620px){.credTiles li:nth-child(2){border-top:1px solid rgba(255,255,255,.12)}}
+.chefPhoto:before{content:none}
+.photoFrame{position:relative}
+.photoFrame:before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid rgba(159,199,174,.45);border-radius:4px;pointer-events:none}
+.chefPhoto figcaption{margin-top:34px}
+.chefPhoto{width:min(300px,100%)}
+@media(max-width:900px){.chefPhoto{width:240px;max-width:calc(100% - 18px);justify-self:start}}
