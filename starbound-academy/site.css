@@ -162,3 +162,10 @@
 .coursePage .note-box{background:#eef2ff;border-left-color:var(--star-electric);color:#344054}
 @media(max-width:800px){.weekGrid{grid-template-columns:1fr}.week dl{grid-template-columns:1fr;gap:2px}.week dd{margin-bottom:8px}}
 .courseHero .btnGhost{color:#e0e7ff;border-color:rgba(165,180,252,.6)}
+
+/* Eight menu links: on mid-size screens they get their own row under the logo */
+@media(min-width:901px) and (max-width:1240px){
+  .starSite .nav{flex-wrap:wrap;height:auto;padding-top:12px;row-gap:4px}
+  .starSite .navlinks{order:3;width:100%;justify-content:center;gap:18px;padding:4px 0 12px;white-space:nowrap}
+  html{scroll-padding-top:120px}
+}
