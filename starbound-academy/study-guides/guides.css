@@ -1,11 +1,8 @@
 /* Study guide viewer */
 body.guidePage{background:#050a1c;color:#e5e7f2}
 .guideHead{padding:44px 0 18px}
-.refKicker{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:#a5b4fc}
 .guideHead h1{font-size:clamp(30px,4.5vw,48px);line-height:1.1;margin:10px 0 12px;letter-spacing:-.02em}
 .guideHead p{color:#c7cbe0;max-width:760px;line-height:1.7;margin:0 0 18px}
-.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 20px;font-weight:850;background:var(--star-electric);color:#fff;border:0;cursor:pointer;font:inherit;font-weight:850}
-.btns{display:flex;flex-wrap:wrap;gap:12px}
 .zoombar{position:sticky;top:70px;z-index:40;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px;background:rgba(5,10,28,.92);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
 .zoombar button{min-width:44px;height:40px;border-radius:999px;border:1px solid rgba(165,180,252,.45);background:rgba(11,19,43,.9);color:#fff;font:inherit;font-weight:800;font-size:16px;padding:0 14px;cursor:pointer}
 .zoombar button:hover{border-color:#a5b4fc}
@@ -26,4 +23,53 @@ body.guidePage{background:#050a1c;color:#e5e7f2}
   .printNote{display:block!important;color:#000;font:16px/1.5 Georgia,serif;padding:40px}
   body.guidePage{background:#fff}
 }
-.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;z-index:100;background:#fff;color:#111;padding:12px;border-radius:8px}
+
+[hidden]{display:none!important}
+
+/* Viewer extras */
+.crumb{color:#a5b4fc;font-size:14px;font-weight:700}
+.crumb:hover{text-decoration:underline}
+.crumbSep{color:#6b7280;margin:0 8px}
+.guideHead .guideMetaLine{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#a5b4fc;margin:0 0 8px}
+.guidePage .btnGhost{background:transparent;color:#e0e7ff;border:1.5px solid rgba(165,180,252,.6)}
+
+/* Study guide library */
+body.libPage{background:var(--earth-canvas);color:var(--ink)}
+.libPage .topbar{background:var(--star-deep);color:#fff}
+.libHead{padding:48px 0 6px}
+.libHead .refKicker{color:var(--star-electric)}
+.libHead h1{font:500 clamp(34px,5vw,54px)/1.08 Georgia,serif;margin:12px 0 12px;letter-spacing:-.02em}
+.libHead p{color:#475467;max-width:720px;line-height:1.7;font-size:17px;margin:0}
+.libCard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;margin-top:22px;margin-bottom:22px;box-shadow:0 10px 30px #0f172a0d}
+.libSearch label{display:block;font-size:14px;font-weight:700;margin-bottom:8px;color:#344054}
+.libSearch input{width:100%;height:48px;border:1px solid #cbd5e1;border-radius:10px;padding:0 14px;font-size:16px;background:#f8fafc;color:var(--ink)}
+.libSearch input:focus{outline:3px solid #818cf8;outline-offset:1px;background:#fff}
+.libFilters{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.libFilters button{min-height:42px;padding:9px 14px;border:1px solid #d0d5dd;border-radius:999px;background:#fff;color:#344054;font-size:14px;font-weight:700}
+.libFilters button:hover{border-color:var(--star-violet)}
+.libFilters button[aria-pressed=true]{background:var(--star-navy);border-color:var(--star-navy);color:#fff}
+.libFilters button:focus-visible,.libLinks a:focus-visible,.libEntry h3 a:focus-visible{outline:3px solid #818cf8;outline-offset:3px}
+.libCount{font-size:14px;color:#667085;margin:16px 0 0}
+.libLetter{font:500 26px/1.2 Georgia,serif;color:var(--star-electric);border-bottom:2px solid var(--line);padding-bottom:6px;margin:30px 0 6px;letter-spacing:0}
+.libBlurb{color:#667085;font-size:15px;line-height:1.6;margin:0}
+.libEntry{padding:20px 0;border-bottom:1px solid var(--line)}
+.libGroup .libEntry:last-child{border-bottom:0}
+.libBadges{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:13px;color:#667085;margin-bottom:8px}
+.badge{display:inline-block;border-radius:6px;padding:3px 9px;font-size:12px;font-weight:800;letter-spacing:.03em;border:1px solid}
+.t-worksheet{background:#eef2ff;color:#3730a3;border-color:#c7d2fe}
+.t-lesson-notes{background:#ecfdf3;color:#166534;border-color:#bbf7d0}
+.t-reference{background:#fdf2f8;color:#9d174d;border-color:#fbcfe8}
+.t-diagnostic{background:#fffbeb;color:#92400e;border-color:#fde68a}
+.t-instructor-packet{background:#f0f9ff;color:#075985;border-color:#bae6fd}
+.libEntry h3{font-size:19px;line-height:1.35;margin:0 0 6px}
+.libEntry h3 a{color:var(--ink)}
+.libEntry h3 a:hover{color:var(--star-electric)}
+.libEntry p{color:#475467;font-size:15px;line-height:1.6;margin:0 0 10px}
+.libEntry .libLinks{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px;font-weight:700;margin:0}
+.libLinks a{color:var(--star-electric)}
+.libLinks a:hover{text-decoration:underline}
+.libLinks a.buy{color:#475467}
+.libEmpty{padding:24px 0 4px;color:#667085}
+.libNote{background:#eef2ff;border-left:3px solid var(--star-electric);border-radius:0 12px 12px 0;padding:18px 22px;margin-bottom:48px;color:#344054;line-height:1.6}
+.libNote a{color:var(--star-electric);font-weight:700;text-decoration:underline}
+@media(max-width:620px){.libHead{padding-top:32px}.libCard{padding:18px}.libFilters button{flex:1 1 calc(50% - 8px)}}
