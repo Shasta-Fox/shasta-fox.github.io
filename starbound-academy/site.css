@@ -121,3 +121,44 @@
 /* Course outlines */
 .courseOutline ol{padding-left:20px;margin:8px 0}
 .starSite .courseOutline summary{color:var(--star-electric)}
+
+/* Course page: Foundational Mathematics for Science */
+.coursePage main>section:nth-of-type(odd){background:#fff;color:var(--ink)}
+.coursePage main>section:nth-of-type(even){background:var(--earth-canvas);color:var(--ink)}
+.coursePage main>section{padding:64px 0}
+.coursePage h2{font-family:Georgia,serif}
+.coursePage h3{font-size:18px;margin:26px 0 10px}
+.courseHero{background:linear-gradient(135deg,var(--star-navy),var(--star-indigo));color:#fff;padding:48px 0 52px}
+.courseHero h1{font:500 clamp(36px,5vw,58px)/1.06 Georgia,serif;margin:12px 0 14px}
+.courseHero .lead{color:#c7cbe0;max-width:720px;font-size:19px}
+.crumbLink{display:inline-block;color:#a5b4fc;font-weight:700;font-size:14px;margin-bottom:18px}
+.statRow{list-style:none;padding:0;margin:24px 0;display:flex;flex-wrap:wrap;gap:12px}
+.statRow li{min-width:120px;background:rgba(255,255,255,.06);border:1px solid rgba(165,180,252,.35);border-radius:14px;padding:12px 18px;color:#c7cbe0;font-size:14px}
+.statRow strong{display:block;font-size:30px;line-height:1.1;color:#fff}
+.heroNote{color:#aab0c8;font-size:14px;margin:16px 0 0}
+.tableWrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.unitTable{min-width:640px}
+.cycle{padding-left:22px;max-width:820px}
+.cycle li{line-height:1.7;margin:8px 0}
+.routine{background:#eef2ff;border-left:3px solid var(--star-electric);border-radius:0 12px 12px 0;padding:14px 18px;max-width:820px}
+.unitBlock{background:#fff;border:1px solid var(--line);border-radius:16px;margin:0 0 14px;overflow:hidden}
+.unitBlock summary{cursor:pointer;padding:18px 22px;font-size:19px;font-weight:800;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.unitBlock summary:focus-visible{outline:3px solid #818cf8;outline-offset:-3px}
+.unitNum{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--star-electric)}
+.unitWeeks{font-size:14px;font-weight:600;color:#667085}
+.unitLink{margin:0 22px 14px;font-size:14px}
+.unitLink a{color:var(--star-electric);font-weight:700}
+.weekGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:0 22px 22px}
+.week{background:var(--earth-canvas);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.week h4{margin:0 0 10px;font-size:16px;line-height:1.35}
+.week h4 span{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--star-electric)}
+.week dl{margin:0;display:grid;grid-template-columns:118px 1fr;gap:6px 12px;font-size:14px;line-height:1.55}
+.week dt{font-weight:800;color:#475467}
+.week dd{margin:0;color:#344054}
+.outcomes{margin:0;padding:22px 24px 22px 44px;background:#fff;border:1px solid var(--line);border-radius:22px}
+.outcomes li,.assess li,.formulas li{line-height:1.65;margin:8px 0}
+.assess,.formulas{max-width:880px;padding-left:20px}
+.formulaTitle{margin-top:30px}
+.coursePage .note-box{background:#eef2ff;border-left-color:var(--star-electric);color:#344054}
+@media(max-width:800px){.weekGrid{grid-template-columns:1fr}.week dl{grid-template-columns:1fr;gap:2px}.week dd{margin-bottom:8px}}
+.courseHero .btnGhost{color:#e0e7ff;border-color:rgba(165,180,252,.6)}
