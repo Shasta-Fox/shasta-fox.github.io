@@ -52,3 +52,9 @@ body.earthSite{background:#0d1a12}
   .earthSite .navlinks a{padding:6px 0}
   .earthSite section[id]{scroll-margin-top:120px}
 }
+
+/* Phones: swipe sideways through each group of classes instead of one long column. */
+@media(max-width:900px){
+  .earthSite .workshopGrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:10px;-webkit-overflow-scrolling:touch}
+  .earthSite .workshopGrid>.workshop{flex:0 0 86%;scroll-snap-align:start}
+}
