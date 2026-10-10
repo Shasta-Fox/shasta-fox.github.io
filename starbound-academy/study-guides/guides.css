@@ -75,3 +75,24 @@ body.libPage{background:var(--earth-canvas);color:var(--ink)}
 @media(max-width:620px){.libHead{padding-top:32px}.libCard{padding:18px}.libFilters button{flex:1 1 calc(50% - 8px)}}
 .t-poster{background:#fff7ed;color:#9a3412;border-color:#fed7aa}
 .t-curriculum{background:#eef2ff;color:#1e1b4b;border-color:#a5b4fc}
+
+/* Infographics tab */
+.libAlso{margin:0 0 10px!important}
+.libAlso a,.igJump a{color:var(--star-electric);font-weight:700}
+.igJump{margin-top:12px!important;font-size:15px}
+.igGroup+.igGroup{margin-top:12px}
+.igGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;margin:16px 0 8px}
+.igCard{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;color:var(--ink);transition:transform .2s ease,box-shadow .2s ease}
+.igCard:hover,.igCard:focus-visible{transform:translateY(-3px);box-shadow:0 14px 34px #0f172a1f}
+.igCard:focus-visible{outline:3px solid #818cf8;outline-offset:3px}
+.igThumb{display:block;aspect-ratio:3/4;overflow:hidden;background:#eef0f8;border-bottom:1px solid var(--line)}
+.igThumb img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.igText{display:flex;flex-direction:column;gap:4px;padding:14px 16px 16px}
+.igMeta{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#667085}
+.igText strong{font-size:16px;line-height:1.35}
+.igOpen{margin-top:4px;font-size:14px;font-weight:700;color:var(--star-electric)}
+/* Ghost effect: previews start invisible, then fade in as they scroll into view */
+.fx .igCard{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease,box-shadow .2s ease}
+.fx .igCard.in{opacity:1;transform:none}
+.fx .igCard.in:hover{transform:translateY(-3px)}
+@media(max-width:620px){.igGrid{grid-template-columns:repeat(2,1fr);gap:12px}.igText{padding:10px 12px 12px}.igText strong{font-size:14px}.igOpen{display:none}}
