@@ -1,0 +1,94 @@
+
+/* Preserve the academy content in the original space-and-forest visual system. */
+.wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}.prose{max-width:760px}
+main>section:not(.statement){padding:80px 0}h2{font-size:clamp(30px,4vw,46px);line-height:1.13;margin:0 0 20px}h3{font-size:22px;line-height:1.25;margin:0 0 14px}p{line-height:1.7;margin:0 0 18px}.lead{font-size:18px;color:#667085}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 20px;font-weight:850;background:var(--star-electric);color:white}.btns{display:flex;flex-wrap:wrap;gap:12px}.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;z-index:100;background:white;color:#111;padding:12px}a:focus-visible,summary:focus-visible{outline:3px solid #818cf8;outline-offset:4px}
+.new{background:var(--earth-canvas);color:var(--ink)}.new>.wrap>h2,#algebra h2,#tutoring h2,#earthbound h2,#teacher h2{font-family:Georgia,serif}.new .lead{color:#667085!important}.pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}.feature{background:white;border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 10px 30px #0f172a0d}.feature h3{color:var(--star-electric)}.feature p{color:#667085}.facts{display:grid;grid-template-columns:70px 1fr;gap:9px 16px;line-height:1.6}.facts dt{font-weight:800;color:#475467}.facts dd{margin:0}.feature .btn{margin-top:10px}
+#algebra{background:#f5f2eb;color:var(--ink)}.days{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:30px}.day{background:white;border:1px solid var(--line);border-radius:22px;padding:28px}.day h3 span{display:block;font-size:15px;color:#667085;margin-top:8px}.day li{line-height:1.7;margin-bottom:8px}.who{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:34px}.who p{color:#667085}.ideas{background:linear-gradient(90deg,rgba(3,7,18,.97),rgba(11,19,43,.9)),url("https://images-assets.nasa.gov/image/PIA12348/PIA12348~orig.jpg") center/cover}.ideas .lead{color:#cbd5e1}.constellation{list-style:none;padding:0 0 0 24px;margin:36px 0;border-left:2px solid #818cf8}.constellation li{position:relative;padding:0 0 32px 14px}.constellation li:before{content:"";position:absolute;left:-32px;top:6px;width:14px;height:14px;border-radius:50%;background:#818cf8;box-shadow:0 0 20px #818cf8}.era{display:block;color:#a5b4fc;font-size:14px;margin-bottom:8px}.constellation p,.read{color:#cbd5e1}.note-box{border-left:3px solid #818cf8;padding:18px 24px;background:#ffffff0a;border-radius:0 16px 16px 0}
+#tutoring{background:var(--earth-canvas);color:var(--ink)}.split{display:grid;grid-template-columns:1fr 1.2fr;gap:42px}.rows{width:100%;border-collapse:collapse;background:white;border-radius:16px;overflow:hidden}.rows th,.rows td{text-align:left;padding:18px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.6}.rows th{color:#475467}.rows small{display:block;color:#667085;margin-top:8px}.rows .num{text-align:right;white-space:nowrap}#earthbound{background:linear-gradient(90deg,rgba(19,57,38,.9),rgba(19,57,38,.93)),url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=85") center/cover;color:white}#earthbound .lead{color:#effaf2}#earthbound .rows{color:#171717}
+#teacher{background:#f5f2eb;color:var(--ink)}.teacher{display:grid;grid-template-columns:1fr 1.2fr;gap:42px}.creds{list-style:none;margin:0;padding:24px;background:white;border:1px solid var(--line);border-radius:22px}.creds li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.65}.creds li:last-child{border:0}#teacher .promise{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:34px}.promise li{line-height:1.7;margin-bottom:10px}.enroll{background:var(--star-deep)}.steps{padding-left:24px;max-width:760px;color:#cbd5e1}.steps li{line-height:1.8;margin:14px 0}.enroll .btn{margin-top:18px}footer{background:var(--star-deep);padding:30px 0;border-top:1px solid #ffffff14;color:#98a2b3;font-size:13px}.navlinks{gap:14px;font-size:13px}
+@media(max-width:900px){.pair,.days,.teacher,.split,#teacher .promise{grid-template-columns:1fr}.who{grid-template-columns:1fr}.nav{height:auto;min-height:70px;padding:12px 0}.heroPanel{padding:64px 24px}.navlinks{display:none}}@media(max-width:620px){main>section:not(.statement){padding:52px 0}.feature,.day{padding:22px}.facts{grid-template-columns:60px 1fr;gap:8px}.rows th,.rows td{padding:12px}.rows .num{white-space:normal}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Earthbound workshops and chef */
+.workshopGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:32px}
+.workshop{color:var(--ink);display:flex;flex-direction:column}
+.workshop h3{color:var(--earth-leaf)}
+.workshop .facts{margin:0 0 6px}
+.workshop .btn{margin-top:auto;align-self:flex-start}
+.workshop .courseOutline{margin:14px 0 20px}
+.retreat{grid-column:1/-1;border:2px solid var(--earth-sprout)}
+.newTag{align-self:flex-start;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;background:#e3f4ea;color:var(--earth-fern);padding:6px 10px;border-radius:999px;margin-bottom:12px}
+.earthBtn{background:var(--earth-leaf)}
+.earthFacts{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;color:#effaf2;line-height:1.6}
+.earthFacts li{border-left:3px solid var(--earth-sprout);padding-left:14px}
+.chef{background:#f5f2eb;color:var(--ink)}
+#chef h2,#chef h3{font-family:Georgia,serif}
+#chef h3{margin-top:26px}
+@media(max-width:900px){.workshopGrid,.earthFacts{grid-template-columns:1fr}}
+.earthSteps{margin:28px 0 0;padding-left:22px;color:#effaf2;line-height:1.7;max-width:760px}.earthSteps li{margin:8px 0}
+main section[id]{scroll-margin-top:80px}
+
+/* Community */
+.community{background:var(--earth-canvas);color:var(--ink)}
+#community h2,#community h3{font-family:Georgia,serif}
+#community .who h3{color:var(--earth-leaf)}
+.involve{margin-top:34px;background:white;border:1px solid var(--line);border-left:4px solid var(--earth-sprout);border-radius:0 22px 22px 0;padding:26px 28px}
+.involve p{color:#667085}
+
+/* Chef showcase */
+.chefShow{background:radial-gradient(900px 420px at 85% 0%,rgba(82,183,136,.20),transparent 60%),linear-gradient(140deg,var(--earth-soil) 0%,#1d2a1b 45%,var(--earth-fern) 100%);color:#fff}
+.chefHead{display:grid;grid-template-columns:1.5fr .9fr;gap:40px;align-items:center}
+.chefShow .kicker{color:#c8f4d7}
+.chefShow h2{font-family:Georgia,serif;font-size:clamp(40px,6vw,68px);line-height:1.02;letter-spacing:-.02em;margin:12px 0 18px}
+.chefLead{font-size:19px;line-height:1.7;color:#e6efe7;max-width:640px}
+.monogram{justify-self:center;width:min(280px,70vw);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,rgba(255,255,255,.18),transparent 55%),linear-gradient(135deg,var(--earth-leaf),var(--earth-fern) 55%,var(--earth-soil));border:1px solid rgba(255,255,255,.18);box-shadow:0 0 0 10px rgba(82,183,136,.10),0 30px 80px rgba(0,0,0,.45)}
+.monogram span{font-family:Georgia,serif;font-size:clamp(64px,9vw,104px);letter-spacing:.04em;color:#f3fbf5}
+.credTiles{list-style:none;padding:0;margin:48px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.credTiles li{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.credBig{font-family:Georgia,serif;font-size:clamp(26px,3vw,36px);line-height:1.05;color:#a8e6c1}
+.credText{color:#dce6d6;line-height:1.55;font-size:15px}
+.chefWork{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:40px;padding-top:34px;border-top:1px solid rgba(255,255,255,.12)}
+.chefWork h3{font-family:Georgia,serif;font-size:20px;color:#fff}
+.chefWork p{color:#cfdccf;font-size:15px}
+.chefAlso{margin:22px 0 0;color:#cfdccf}
+.chefAlso a,.chefShow .inlineLink{color:#a8e6c1;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.inlineLink{font-weight:800;text-decoration:underline;text-underline-offset:3px}
+#earthbound .lead .inlineLink{color:#c8f4d7}
+.workshop .inlineLink{color:var(--earth-leaf)}
+#teacher .inlineLink{color:var(--earth-leaf)}
+#ask-chef h2{font-family:Georgia,serif}
+@media(max-width:900px){.chefHead{grid-template-columns:1fr}.chefPhoto{order:-1;justify-self:stretch;width:100%;max-width:460px}.credTiles,.chefWork{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.credTiles,.chefWork{grid-template-columns:1fr}}
+.chefPhoto{margin:0;justify-self:end;width:min(400px,100%)}
+.chefPhoto img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:28px;border:1px solid rgba(255,255,255,.18);box-shadow:0 0 0 10px rgba(82,183,136,.10),0 30px 80px rgba(0,0,0,.45)}
+
+/* Chef showcase: editorial refinement */
+.chefShow{background:linear-gradient(160deg,#17130e 0%,#14201a 50%,#0f2a1c 100%)}
+.chefShow>.wrap{padding-top:12px;padding-bottom:12px}
+.chefHead{gap:64px}
+.chefShow .kicker{font-size:11px;letter-spacing:.28em;color:#9fc7ae;font-weight:700}
+.chefShow h2{font-weight:400;letter-spacing:-.01em;margin:16px 0 0}
+.chefRule{display:block;width:56px;height:1px;background:#9fc7ae;margin:26px 0 24px}
+.chefLead{font-size:18px;color:#d9e3da;font-weight:400}
+.chefShow .btns{margin-top:30px}
+.chefPhoto{position:relative;width:min(380px,100%)}
+.chefPhoto:before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid rgba(159,199,174,.45);border-radius:4px;pointer-events:none}
+.chefPhoto img{position:relative;border-radius:4px;border:0;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.chefPhoto figcaption{position:relative;margin-top:30px;font-family:Georgia,serif;font-style:italic;font-size:14px;color:#9fc7ae;text-align:right}
+.credTiles{gap:0;margin-top:64px;border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)}
+.credTiles li{background:none;border:0;border-radius:0;padding:28px 26px;border-left:1px solid rgba(255,255,255,.12)}
+.credTiles li:first-child{border-left:0;padding-left:0}
+.credBig{font-weight:400;color:#e9f3ec;font-size:clamp(24px,2.6vw,32px)}
+.credText{color:#a9bcae;font-size:14px}
+.chefWork{border-top:0;margin-top:44px;padding-top:0;gap:36px}
+.chefWork h3{font-weight:400;font-size:19px;color:#e9f3ec;padding-top:14px;border-top:1px solid #9fc7ae;display:inline-block}
+.chefWork p{color:#b4c4b7}
+.chefAlso{margin-top:36px;font-family:Georgia,serif;font-style:italic;color:#b4c4b7}
+.chefAlso a{font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-style:normal}
+@media(max-width:900px){.chefHead{gap:48px}.chefPhoto{width:calc(100% - 18px)}.credTiles li{border-left:0;border-top:1px solid rgba(255,255,255,.12);padding:22px 0}.credTiles li:nth-child(-n+2){border-top:0}.credTiles{column-gap:24px}}
+@media(max-width:620px){.credTiles li:nth-child(2){border-top:1px solid rgba(255,255,255,.12)}}
+.chefPhoto:before{content:none}
+.photoFrame{position:relative}
+.photoFrame:before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid rgba(159,199,174,.45);border-radius:4px;pointer-events:none}
+.chefPhoto figcaption{margin-top:34px}
+.chefPhoto{width:min(300px,100%)}
+@media(max-width:900px){.chefPhoto{width:240px;max-width:calc(100% - 18px);justify-self:start}}
