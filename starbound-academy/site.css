@@ -76,3 +76,44 @@
 .guideBody p{color:#667085;margin:0}
 .guideBody .btns{margin-top:auto;padding-top:14px}
 @media(max-width:900px){.guideGrid{grid-template-columns:1fr}.guideCover{height:220px}}
+
+/* Topic bubbles are links */
+.tagrow a.tag:hover,.tagrow a.tag:focus-visible{background:rgba(79,70,229,.45);border-color:#a5b4fc}
+
+/* Algebra reference: tap a card or box to see it larger */
+.svgDefs{position:absolute;width:0;height:0;overflow:hidden}
+.refHint{color:#aab0c8;font-size:14px;margin:-6px 0 14px}
+#reference .tcard,#reference .neon{cursor:zoom-in}
+#reference .tcard:hover,#reference .neon:hover{border-color:#a5b4fc;box-shadow:0 0 0 1px rgba(165,180,252,.4),0 0 32px rgba(79,70,229,.35)}
+#reference .tcard:focus-visible,#reference .neon:focus-visible{outline:3px solid #a5b4fc;outline-offset:3px}
+.zoomBox{position:fixed;inset:0;z-index:100;display:flex;padding:28px 16px;overflow:auto;background:rgba(3,7,18,.88)}
+.zoomBox[hidden]{display:none}
+.zoomInner{position:relative;margin:auto;width:min(760px,100%)}
+#reference .zoomBody>*{cursor:default}
+.zoomBody .tcard{align-items:center;text-align:center;padding:28px;gap:8px}
+.zoomBody .mini{max-width:360px}
+.zoomBody .trule{font-size:30px}
+.zoomBody .tname{font-size:15px}
+.zoomBody .teffect{font-size:19px}
+.zoomBody .tex{font-size:17px}
+.zoomClose{position:absolute;top:-14px;right:-8px;z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid rgba(165,180,252,.7);background:#0b132b;color:#fff;font-size:26px;line-height:1}
+@media(min-width:700px){.zoomBody .neon{zoom:1.25}}
+
+/* Study guides: subject links */
+.guideCats{color:#667085;margin:0 0 16px}
+.guideCats a{color:var(--star-electric);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+/* Essay review */
+.essay{background:linear-gradient(135deg,var(--star-navy),var(--star-indigo));color:#fff}
+#essay h2{font-family:Georgia,serif}
+.essay .lead{color:#cbd5e1}
+.essaySteps{margin:0;padding:22px 24px 22px 46px;background:rgba(255,255,255,.05);border:1px solid rgba(165,180,252,.3);border-radius:22px;color:#d7dbee}
+.essaySteps li{line-height:1.7;margin:10px 0}
+.essaySteps strong{color:#fff}
+.essaySteps a{color:#c7d2fe;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+
+/* Teacher photo */
+.teacherPhoto{position:relative;width:220px;margin:26px 0 0}
+.teacherPhoto:before{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid rgba(79,70,229,.35);border-radius:4px;pointer-events:none}
+.teacherPhoto img{position:relative;display:block;width:100%;height:auto;border-radius:4px;box-shadow:0 18px 40px rgba(15,23,42,.18)}
+@media(max-width:900px){.teacherPhoto{width:180px;margin-bottom:14px}}

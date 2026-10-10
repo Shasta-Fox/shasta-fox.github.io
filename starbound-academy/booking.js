@@ -1,4 +1,4 @@
-const services=[{"title": "Math Tutoring", "price": 30, "duration": "50 minutes", "location": "Online"}, {"title": "Writing Coaching", "price": 30, "duration": "50 minutes", "location": "Online"}, {"title": "English & Language Arts", "price": 30, "duration": "50 minutes", "location": "Online"}];
+const services=[{"title": "Math Tutoring", "price": 40, "duration": "50 minutes", "location": "Online"}, {"title": "Writing Coaching", "price": 40, "duration": "50 minutes", "location": "Online"}, {"title": "English & Language Arts", "price": 40, "duration": "50 minutes", "location": "Online"}];
 const el=id=>document.getElementById(id);
 services.forEach((s,i)=>{const o=document.createElement('option');o.value=i;o.textContent=s.title;el('program').append(o)});
 const initial=Number(new URLSearchParams(location.search).get('program'));el('program').value=Number.isInteger(initial)&&initial>=0&&initial<services.length?initial:0;
