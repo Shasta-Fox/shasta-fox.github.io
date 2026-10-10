@@ -31,7 +31,7 @@
     starbound: {
       to: 'shasta', site: 'Starbound Academy', accent: '#4f46e5',
       heading: 'Send a message',
-      intro: 'Ask about a course, ESL, tutoring, or essay review. Shasta Fox writes back by email.',
+      intro: 'Ask about a course, ESL, tutoring, or essay review. Shasta Fox writes back by email. Please do not send essays here: essays are read only after payment.',
       topics: ['Courses', 'ESL', 'Tutoring', 'Essay review', 'Study guides', 'Other'],
       placeholder: 'What would you like to know?'
     }
