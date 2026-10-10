@@ -62,3 +62,17 @@
 @media(max-width:1100px){.tgrid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:900px){.refTop,.refPanels{grid-template-columns:1fr}.params{grid-template-columns:1fr}.tgrid{grid-template-columns:repeat(2,1fr)}.formula{white-space:normal}}
 @media(max-width:420px){.tgrid{gap:10px}.tcard{padding:12px}.trule{font-size:16px}.memory{font-size:13px}.memory th,.memory td{padding:7px 6px}.quick li{grid-template-columns:92px 1fr}}
+
+/* Free study guides */
+.guides{background:var(--earth-canvas);color:var(--ink)}
+#study-guides h2{font-family:Georgia,serif}
+.guideGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px}
+.guideCard{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 30px #0f172a0d}
+.guideCover{display:block;background:linear-gradient(160deg,#1c2541,#0b132b);padding:24px 28px 0;height:250px;overflow:hidden}
+.guideCover img{display:block;width:100%;height:auto;border-radius:4px 4px 0 0;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.guideBody{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.guideMeta{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#667085}
+.guideBody h3{color:var(--star-electric);margin:0}
+.guideBody p{color:#667085;margin:0}
+.guideBody .btns{margin-top:auto;padding-top:14px}
+@media(max-width:900px){.guideGrid{grid-template-columns:1fr}.guideCover{height:220px}}
