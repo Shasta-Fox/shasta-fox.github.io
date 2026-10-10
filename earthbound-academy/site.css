@@ -58,3 +58,6 @@ body.earthSite{background:#0d1a12}
   .earthSite .workshopGrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:10px;-webkit-overflow-scrolling:touch}
   .earthSite .workshopGrid>.workshop{flex:0 0 86%;scroll-snap-align:start}
 }
+
+/* Phones: headline fits on the first screen with its buttons. */
+@media(max-width:620px){.earthSite .hero h1{font-size:32px;line-height:1.12}}
