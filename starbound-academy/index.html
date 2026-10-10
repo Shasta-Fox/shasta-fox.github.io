@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Starbound Academy</title>
 <meta name="description" content="Small online courses in mental math, algebra, foundational mathematics for science, English as a second language, and the history of ideas, plus one-on-one tutoring in English or Spanish, essay review, and free study guides, with Shasta Fox.">
-<link rel="stylesheet" href="../shared/styles.css?v=6"><link rel="stylesheet" href="../shared/content-theme.css?v=6"><link rel="stylesheet" href="./site.css?v=11">
+<link rel="stylesheet" href="../shared/styles.css?v=6"><link rel="stylesheet" href="../shared/content-theme.css?v=6"><link rel="stylesheet" href="./site.css?v=12">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Starbound Academy">
 <meta property="og:title" content="Starbound Academy — Learn to reason with confidence.">
@@ -71,7 +71,7 @@
           <div class="navPanel" id="menu-help">
             <ul class="panelList">
               <li><a href="#tutoring"><strong>Live tutoring</strong><span>One-on-one online sessions in English or Spanish.</span></a></li>
-              <li><a href="#essay"><strong>Essay review</strong><span>Send an essay and get written notes back by email.</span></a></li>
+              <li><a href="#essay"><strong>Essay review</strong><span>Pay first, then send your essay for written notes.</span></a></li>
             </ul>
           </div>
         </li>
@@ -466,12 +466,14 @@
   <div class="wrap split">
     <div class="prose">
       <h2>Essay review</h2>
-      <p class="lead">Submit an essay for review and get written notes back by email. $30 per essay.</p>
-      <div class="btns"><a class="btn" data-price="30" href="mailto:shastaandziggy@gmail.com?subject=Essay%20review%20(%2430)&amp;body=Attach%20your%20essay%20to%20this%20email.%0A%0AEssay%20prompt%3A%0ADue%20date%3A">Submit your essay · $30</a></div>
+      <p class="lead">Written notes on your essay, sent back by email. $30 per essay.</p>
+      <p class="essayRule">Payment comes first. Essays are read only after payment arrives.</p>
+      <div class="btns"><a class="btn" data-price="30" data-essay href="#enroll">Pay for essay review · $30</a></div>
     </div>
     <ol class="essaySteps">
-      <li><strong>Pay $30</strong> with the button.</li>
-      <li><strong>Email your essay</strong> to <a href="mailto:shastaandziggy@gmail.com?subject=Essay%20for%20review">shastaandziggy@gmail.com</a> as a Word, Google Docs, or PDF file. Include the prompt and your due date.</li>
+      <li><strong>Pay $30</strong> with the button. Write "Essay review" in the payment note.</li>
+      <li><strong>Watch your email.</strong> After your payment arrives, Shasta Fox writes to the email address on your payment with instructions for sending your essay.</li>
+      <li><strong>Send your essay</strong> by replying to that email, as a Word, Google Docs, or PDF file. Include the prompt and your due date.</li>
       <li><strong>Get your notes.</strong> Shasta Fox reads your essay and emails you written notes.</li>
     </ol>
   </div>
@@ -544,9 +546,10 @@
 </footer>
 
 <script src="../shared/pay-links.js?v=6"></script>
+<script>/* Essay review: without a payment link, the button leads to the message box, never to an email. */(function(){var b=document.querySelector("[data-essay]");if(b&&b.getAttribute("href").charAt(0)==="#")b.textContent="Ask about essay review · $30";})();</script>
 <script src="./nav.js?v=10"></script>
 <script src="./mobile.js?v=1" defer></script>
-<script src="../shared/contact-box.js?v=1" defer></script>
+<script src="../shared/contact-box.js?v=2" defer></script>
 <script>
 /* Algebra reference: tap a card or box to see it larger. */
 (function () {

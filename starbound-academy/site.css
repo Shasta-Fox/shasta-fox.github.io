@@ -351,3 +351,5 @@ main section[id],.feature[id]{scroll-margin-top:calc(var(--site-header-height) +
   .libEntry>div>p:not(.libLinks){display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 }
 @media(max-width:640px) and (prefers-reduced-motion:reduce){.swipe{scroll-behavior:auto}}
+
+.essayRule{margin:0 0 18px;padding:12px 16px;border-left:3px solid #a5b4fc;background:rgba(165,180,252,.1);border-radius:0 12px 12px 0;color:#e0e4f5;font-weight:600}
