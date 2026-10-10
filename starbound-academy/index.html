@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Starbound Academy</title>
 <meta name="description" content="Small online courses in mental math, algebra, foundational mathematics for science, and the history of ideas, plus one-on-one tutoring in English or Spanish, essay review, and free study guides, with Shasta Fox.">
-<link rel="stylesheet" href="../shared/styles.css?v=6"><link rel="stylesheet" href="../shared/content-theme.css?v=6"><link rel="stylesheet" href="./site.css?v=6">
+<link rel="stylesheet" href="../shared/styles.css?v=6"><link rel="stylesheet" href="../shared/content-theme.css?v=6"><link rel="stylesheet" href="./site.css?v=8">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Starbound Academy">
 <meta property="og:title" content="Starbound Academy — Learn to reason with confidence.">
@@ -24,7 +24,56 @@
 </head>
 <body class="starSite">
 <a class="skip" href="#main">Skip to content</a>
-<div class="topbar"><div class="shell nav"><a class="brand" href="#"><span class="mark starMark"></span><span>STARBOUND ACADEMY<small>Learning that reaches farther · Online</small></span></a><nav class="navlinks"><a href="#courses">Courses</a><a href="./study-guides/">Study guides</a><a href="./study-guides/infographics.html">Infographics</a><a href="#reference">Algebra reference</a><a href="#essay">Essay review</a><a href="#tutoring">Tutoring</a><a href="#teacher">Your teacher</a><a href="https://shasta-fox.github.io/earthbound-academy/#chef">East Side Catering ↗</a></nav><a class="navcta" href="#enroll">Enroll</a></div></div><section class="hero single"><article class="heroPanel starHero"><div class="heroContent"><div class="kicker">Starbound Academy • Online</div><h1>Learn to reason with confidence.</h1><p>Focused individual instruction in mathematics, writing, language arts, and English. Clear explanations. Deliberate practice. Real understanding.</p><div class="tagrow"><a class="tag" href="./study-guides/#math">Math</a><a class="tag" href="./study-guides/#algebra">Algebra</a><a class="tag" href="#essay">Writing</a><a class="tag" href="./study-guides/#language-arts">Language Arts</a><a class="tag" href="#essay">English</a></div><div class="actions"><a class="button starButton" href="#courses">See the courses</a><a class="button ghostButton" href="#tutoring">Tutoring</a></div></div></article></section>
+<!-- topbar -->
+<div class="topbar">
+  <div class="shell nav">
+    <a class="brand" href="#"><span class="mark starMark"></span><span>STARBOUND ACADEMY<small>Learning that reaches farther · Online</small></span></a>
+    <nav class="navlinks starNav" id="site-menu" aria-label="Main">
+      <ul class="navList">
+        <li class="navItem">
+          <button class="navTrigger" type="button" aria-expanded="false" aria-controls="menu-courses">Courses</button>
+          <div class="navPanel" id="menu-courses">
+            <ul class="panelGrid">
+              <li><a href="#algebra-demystified"><strong>Algebra Demystified</strong><span>A weekend workshop for anyone told they are “not a math person.”</span></a></li>
+              <li><a href="#mental-math"><strong>Mental Math Workshop</strong><span>Fast arithmetic in your head, from multiplication to negative numbers.</span></a></li>
+              <li><a href="./foundational-math-for-science.html"><strong>Foundational Mathematics for Science</strong><span>Twenty weeks from arithmetic to trigonometry, built for science.</span></a></li>
+              <li><a href="#socrates-to-kuhn"><strong>From Socrates to Kuhn</strong><span>Six evenings on how people argued about knowledge, truth, and science.</span></a></li>
+            </ul>
+            <a class="panelFoot" href="#courses">See all courses</a>
+          </div>
+        </li>
+        <li class="navItem">
+          <button class="navTrigger" type="button" aria-expanded="false" aria-controls="menu-guides">Study guides</button>
+          <div class="navPanel" id="menu-guides">
+            <div class="panelSplit">
+              <a class="panelFeature" href="./study-guides/"><span class="mark starMark"></span><strong>Study guide library</strong><span>Free worksheets, lesson notes, and references to read online.</span></a>
+              <ul class="panelList">
+                <li><a href="./study-guides/infographics.html"><strong>Infographics</strong><span>One-page math and science references, shown as previews.</span></a></li>
+                <li><a href="#reference"><strong>Algebra reference</strong><span>How changing an equation moves, flips, and stretches a graph.</span></a></li>
+                <li><a href="./study-guides/#science"><strong>Math for Science</strong><span>Unit infographics and reference posters for the science course.</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="navItem">
+          <button class="navTrigger" type="button" aria-expanded="false" aria-controls="menu-help">Tutoring</button>
+          <div class="navPanel" id="menu-help">
+            <ul class="panelList">
+              <li><a href="#tutoring"><strong>Live tutoring</strong><span>One-on-one online sessions in English or Spanish.</span></a></li>
+              <li><a href="#essay"><strong>Essay review</strong><span>Send an essay and get written notes back by email.</span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="navLink" href="#teacher">Your teacher</a></li>
+        <li><a class="navLink" href="https://shasta-fox.github.io/earthbound-academy/#chef">East Side Catering ↗</a></li>
+      </ul>
+    </nav>
+    <button class="menuBtn" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg></button>
+    <a class="navcta" href="#enroll">Enroll</a>
+  </div>
+</div>
+<!-- /topbar -->
+<section class="hero single"><article class="heroPanel starHero"><div class="heroContent"><div class="kicker">Starbound Academy • Online</div><h1>Learn to reason with confidence.</h1><p>Focused individual instruction in mathematics, writing, language arts, and English. Clear explanations. Deliberate practice. Real understanding.</p><div class="tagrow"><a class="tag" href="./study-guides/#math">Math</a><a class="tag" href="./study-guides/#algebra">Algebra</a><a class="tag" href="#essay">Writing</a><a class="tag" href="./study-guides/#language-arts">Language Arts</a><a class="tag" href="#essay">English</a></div><div class="actions"><a class="button starButton" href="#courses">See the courses</a><a class="button ghostButton" href="#tutoring">Tutoring</a></div></div></article></section>
 
 <main id="main"><section class="statement starStatement"><div class="shell"><h2>Learn by the stars.</h2><p>Small online classes in algebra, writing, and the history of ideas. One teacher, small groups, and plain explanations.</p><div class="actions" style="justify-content:center"><a class="button starButton" href="#courses">See the courses</a><a class="button ghostButton" href="#enroll">How to enroll</a></div></div></section>
 
@@ -33,7 +82,7 @@
     <h2>Courses</h2>
     <p class="lead">Every course runs live online, so you can join from anywhere.</p>
     <div class="pair">
-      <article class="feature">
+      <article class="feature" id="algebra-demystified">
         <h3>Algebra Demystified</h3>
         <p>One weekend, six hours, and every step explained. For anyone who was told they are "not a math person" and wants a second try.</p>
         <dl class="facts">
@@ -45,7 +94,7 @@
         </dl>
         <div class="btns"><a class="btn" data-price="120" href="mailto:shastaandziggy@gmail.com?subject=Book%3A%20Algebra%20Demystified">Book the weekend</a><a class="btn btnGhost" href="#algebra">See the weekend plan</a></div>
       </article>
-      <article class="feature">
+      <article class="feature" id="mental-math">
         <h3>Mental Math Workshop</h3>
         <p>Fast, confident arithmetic, from multiplication up to negative numbers. Work it out in your head first, then check it on paper.</p>
         <dl class="facts">
@@ -65,7 +114,7 @@
         </details>
         <div class="btns"><a class="btn" href="mailto:shastaandziggy@gmail.com?subject=Interest%20list%3A%20Mental%20Math%20Workshop">Join the interest list</a><a class="btn btnGhost" href="./study-guides/#math">Practice guides</a></div>
       </article>
-      <article class="feature">
+      <article class="feature" id="foundational-math">
         <h3>Foundational Mathematics for Science</h3>
         <p>A complete learning pathway from elementary arithmetic through high school algebra, geometry, and trigonometry, built for scientific reasoning.</p>
         <dl class="facts">
@@ -77,7 +126,7 @@
         </dl>
         <div class="btns"><a class="btn" href="./foundational-math-for-science.html">See the full curriculum</a><a class="btn btnGhost" href="mailto:shastaandziggy@gmail.com?subject=Interest%20list%3A%20Foundational%20Mathematics%20for%20Science">Join the interest list</a></div>
       </article>
-      <article class="feature">
+      <article class="feature" id="socrates-to-kuhn">
         <h3>From Socrates to Kuhn</h3>
         <p>A crash course in Western thought: how people in one tradition argued about knowledge, truth, and science across 2,400 years.</p>
         <dl class="facts">
@@ -470,6 +519,7 @@
 </footer>
 
 <script src="../shared/pay-links.js?v=6"></script>
+<script src="./nav.js?v=8"></script>
 <script>
 /* Algebra reference: tap a card or box to see it larger. */
 (function () {
