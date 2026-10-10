@@ -60,4 +60,5 @@ body.earthSite{background:#0d1a12}
 }
 
 /* Phones: headline fits on the first screen with its buttons. */
-@media(max-width:620px){.earthSite .hero h1{font-size:32px;line-height:1.12}}
+.earthSite .hero h1 .pop{display:block;margin-top:.15em;color:#c8f4d7;font-style:italic}
+@media(max-width:620px){.earthSite .hero h1{font-size:34px;line-height:1.1}}
