@@ -229,3 +229,73 @@
 .eslContact{margin-top:28px;max-width:760px}
 .enrollGrid{display:grid;grid-template-columns:1fr minmax(0,520px);gap:40px;align-items:start}
 @media(max-width:900px){.enrollGrid{grid-template-columns:1fr}}
+
+
+/* Phone layouts: keep content readable and controls easy to reach. */
+:root{--site-header-height:71px}
+.topbar .brand,.heroContent,.feature,.day,.neon,.refStack,.tcard{min-width:0}
+.menuBtn{flex-shrink:0}
+.navcta{display:inline-flex;align-items:center;justify-content:center;min-height:44px}
+main section[id],.feature[id]{scroll-margin-top:calc(var(--site-header-height) + 16px)}
+@media(max-width:1060px){
+  .menuBtn{width:44px;height:44px}
+  .nav.menuOpen .starNav{max-height:calc(100dvh - var(--site-header-height));overscroll-behavior:contain;padding-bottom:max(20px,env(safe-area-inset-bottom))}
+}
+@media(max-width:620px){
+  .topbar .nav{gap:12px}
+  .topbar .brand{gap:9px;font-size:12px}
+  .topbar .brand small{display:none}
+  .topbar .mark{width:34px;height:34px}
+  .hero.single .heroPanel{min-height:0;padding:48px 22px 52px}
+  .hero h1{font-size:clamp(36px,10vw,52px);line-height:1.04;text-wrap:balance}
+  .hero p{font-size:17px;line-height:1.65}
+  .tagrow{gap:8px}
+  .tagrow .tag{display:inline-flex;align-items:center;min-height:44px;font-size:13px;padding:9px 13px}
+  .actions .button{min-height:48px}
+  .statement{padding:44px 0}
+  .feature,.day{padding:22px 18px;border-radius:18px}
+  .feature .btns,.guideBody .btns{flex-direction:column;align-items:stretch}
+  .btn{min-height:48px;text-align:center}
+  .facts{grid-template-columns:52px minmax(0,1fr);gap:10px 12px;font-size:15px}
+  .courseOutline summary{padding:10px 0;min-height:44px}
+  .refTop,.refPanels{gap:16px}
+  .neon{padding:20px 16px}
+  .formula{font-size:clamp(22px,6.4vw,34px)}
+  .tgrid{grid-template-columns:1fr;gap:14px}
+  .tcard{display:grid;grid-template-columns:104px minmax(0,1fr);column-gap:16px;row-gap:5px;padding:18px 14px;align-items:center}
+  .tcard .mini{grid-column:1;grid-row:1 / 5;width:100%;margin:0}
+  .tcard>span{grid-column:2}
+  .trule{font-size:20px;line-height:1.35}
+  .tname{font-size:11px;letter-spacing:.05em}
+  .teffect,.tex{font-size:14px;line-height:1.5}
+  .memory thead{display:none}
+  .memory tbody,.memory tr,.memory td{display:block}
+  .memory tr{display:grid;grid-template-columns:1fr auto;gap:6px 10px;padding:14px 0;border-bottom:1px solid rgba(165,180,252,.2)}
+  .memory td{border:0;padding:0;font-size:15px;line-height:1.5}
+  .memory td:first-child{color:#a5b4fc}
+  .memory td:nth-child(2){text-align:right;font-size:16px}
+  .memory td:last-child{grid-column:1/-1}
+  .quick li{grid-template-columns:100px minmax(0,1fr);font-size:15px;padding:10px 0}
+  .fourRules ol{font-size:16px}
+  .zoomBox{padding:16px 12px;overscroll-behavior:contain}
+  .zoomInner{width:100%}
+  .zoomClose{position:sticky;top:0;display:block;margin:0 0 10px auto;right:auto;box-shadow:0 4px 20px #0008}
+  .zoomBody .tcard{display:flex;padding:24px 18px}
+  .zoomBody .tcard .mini{width:min(100%,320px)}
+  .zoomBody .trule{font-size:28px}
+  .zoomBody .tname{font-size:14px}
+  .zoomBody .tex{font-size:17px}
+  .zoomBody .neon{padding:24px 18px}
+  .courseHero{padding:32px 0 40px}
+  .courseHero h1{font-size:clamp(32px,9vw,46px)}
+  .statRow{gap:8px}.statRow li{min-width:0;flex:1 1 40%;padding:12px}
+  .weekGrid{padding:0 14px 14px}.week{padding:16px}
+  .unitBlock summary{padding:18px 16px}
+  .unitBody{padding:0 16px 20px}
+}
+@media(max-width:350px){
+  .topbar .nav{gap:8px}.topbar .brand{font-size:11px;gap:7px}.topbar .mark{width:28px;height:28px}
+  .navcta{padding:10px 12px}
+  .tcard{grid-template-columns:82px minmax(0,1fr);column-gap:12px}
+  .trule{font-size:18px}
+}

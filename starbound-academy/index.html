@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Starbound Academy</title>
 <meta name="description" content="Small online courses in mental math, algebra, foundational mathematics for science, English as a second language, and the history of ideas, plus one-on-one tutoring in English or Spanish, essay review, and free study guides, with Shasta Fox.">
-<link rel="stylesheet" href="../shared/styles.css?v=6"><link rel="stylesheet" href="../shared/content-theme.css?v=6"><link rel="stylesheet" href="./site.css?v=9">
+<link rel="stylesheet" href="../shared/styles.css?v=6"><link rel="stylesheet" href="../shared/content-theme.css?v=6"><link rel="stylesheet" href="./site.css?v=10">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Starbound Academy">
 <meta property="og:title" content="Starbound Academy — Learn to reason with confidence.">
@@ -544,7 +544,7 @@
 </footer>
 
 <script src="../shared/pay-links.js?v=6"></script>
-<script src="./nav.js?v=9"></script>
+<script src="./nav.js?v=10"></script>
 <script src="../shared/contact-box.js?v=1" defer></script>
 <script>
 /* Algebra reference: tap a card or box to see it larger. */
@@ -562,7 +562,7 @@
     var copy = el.cloneNode(true);
     copy.removeAttribute('tabindex'); copy.removeAttribute('role'); copy.removeAttribute('aria-label');
     body.innerHTML = ''; body.appendChild(copy);
-    box.hidden = false; document.body.style.overflow = 'hidden'; closeBtn.focus();
+    box.hidden = false; box.scrollTop = 0; document.body.style.overflow = 'hidden'; closeBtn.focus();
   }
   function close() {
     box.hidden = true; body.innerHTML = ''; document.body.style.overflow = '';
@@ -577,9 +577,10 @@
   });
   closeBtn.addEventListener('click', close);
   box.addEventListener('click', function (e) { if (e.target === box) close(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !box.hidden) close(); });
+  document.addEventListener('keydown', function (e) { if (box.hidden) return; if (e.key === 'Escape') close(); if (e.key === 'Tab') { e.preventDefault(); closeBtn.focus(); } });
 })();
 </script>
 </body>
 </html>
+
 
