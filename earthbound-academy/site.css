@@ -22,7 +22,7 @@ body.earthSite{background:#0d1a12}
 .visit .rows th:last-child,.visit .rows td:last-child{width:0;padding:0}
 .earthSite .btnGhost{background:transparent;color:var(--earth-leaf);border:1.5px solid var(--earth-leaf)}
 
-/* Aloha ʻĀina ʻAi prospectus */
+/* Aloha ʻĀina ʻe mālama iā Puna prospectus */
 .community .who h3{color:var(--earth-leaf)}
 .statusNote{background:#fff7e6;border-left:4px solid #b7791f;border-radius:0 12px 12px 0;padding:14px 18px;color:#5c4813;margin-bottom:26px}
 .launchSteps{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:12px 28px;max-width:960px}
