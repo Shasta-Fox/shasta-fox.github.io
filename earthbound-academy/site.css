@@ -42,3 +42,13 @@ body.earthSite{background:#0d1a12}
 .courseGroup .workshopGrid{margin-top:22px;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))}
 .courseGroup .retreat{grid-column:auto}
 .involveBox{margin-top:24px;max-width:720px}
+
+/* Phones: show the top menu as one swipeable row under the logo. */
+@media(max-width:900px){
+  .earthSite .nav{flex-wrap:wrap;row-gap:6px}
+  .earthSite .brand{flex:1 1 0;min-width:0}
+  .earthSite .navlinks{display:flex;order:3;width:100%;overflow-x:auto;gap:18px;white-space:nowrap;padding:4px 0 6px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .earthSite .navlinks::-webkit-scrollbar{display:none}
+  .earthSite .navlinks a{padding:6px 0}
+  .earthSite section[id]{scroll-margin-top:120px}
+}
