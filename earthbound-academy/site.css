@@ -30,3 +30,18 @@ body.earthSite{background:#0d1a12}
 .launchSteps li:before{content:"";position:absolute;left:0;top:3px;width:18px;height:18px;border:2px solid #9fc7ae;border-radius:4px}
 @media(max-width:700px){.launchSteps{grid-template-columns:1fr}}
 .community h2{font-family:Georgia,serif}
+
+/* Keep course anchors visible below the fixed navigation. */
+.earthSite .workshop[id]{scroll-margin-top:100px}
+#specialties .prose:last-child{margin-top:32px}
+#specialties .prose a,#earthbound .prose a{color:#c8f4d7}
+@media(min-width:1100px){#specialties .workshopGrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* A simple, accessible message box for the chef. */
+.chefContact{margin-top:30px;padding:24px;background:#fff;border:1px solid #d7e2d9;border-radius:18px}
+.chefContact label{display:block;margin:18px 0 8px;font-weight:700;color:#243b2d}
+.chefContact input,.chefContact textarea{display:block;width:100%;max-width:100%;box-sizing:border-box;padding:12px;border:1px solid #6c8071;border-radius:8px;background:#fff;color:#172c20;font:inherit}
+.chefContact textarea{resize:vertical;min-height:150px}
+.chefContact :focus-visible{outline:3px solid #35734d;outline-offset:3px}
+.chefContact button{cursor:pointer;border:0;font:inherit;font-weight:700}
+.chefContact #chef-contact-help,.chefContact #chef-contact-status{font-size:14px;line-height:1.6;color:#43574a;overflow-wrap:anywhere}
