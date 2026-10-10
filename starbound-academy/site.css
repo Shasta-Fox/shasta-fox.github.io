@@ -299,3 +299,55 @@ main section[id],.feature[id]{scroll-margin-top:calc(var(--site-header-height) +
   .tcard{grid-template-columns:82px minmax(0,1fr);column-gap:12px}
   .trule{font-size:18px}
 }
+
+/* ---- Phone layout: fewer screens of scrolling (v11) ---- */
+.swipeHint,.foldNote,.credsToggle{display:none}
+@media(max-width:640px){
+  /* Long card stacks become side-swipe rows */
+  .swipe{display:flex!important;grid-template-columns:none!important;gap:12px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-left:-20px!important;margin-right:-20px!important;padding:4px 20px 6px!important;scroll-padding-left:20px}
+  .swipe::-webkit-scrollbar{display:none}
+  .swipe>*{flex:0 0 86%;max-width:340px;scroll-snap-align:start}
+  .swipeHint{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:8px 0 0;font-size:13px;color:#667085}
+  .swipeHint b{font-weight:600}
+  .swipeHint .swipeDots{display:flex;gap:5px}
+  .swipeHint .swipeDots i{width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.3}
+  .swipeHint .swipeDots i.on{opacity:1}
+  #reference .swipeHint,#ideas .swipeHint{color:#a5b4fc}
+
+  /* Courses */
+  #courses .pair{margin-top:20px;align-items:stretch}
+  #courses .feature{padding:20px}
+
+  /* Transformation graphs: compact cards */
+  #reference .tgrid>*{flex-basis:58%;max-width:230px}
+  #reference .tgrid .tcard{display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px;padding:14px 12px}
+  #reference .tgrid .tcard .mini{width:118px;height:118px;margin:0 0 6px}
+  #reference .refTitle{margin-bottom:4px}
+  #reference .refHint{margin-top:0}
+
+  /* Timeline: cards instead of a long vertical line */
+  .constellation.swipe{border-left:0;margin:24px -20px!important}
+  .constellation.swipe li{padding:20px;border:1px solid rgba(165,180,252,.28);border-radius:16px;background:rgba(11,19,43,.6)}
+  .constellation.swipe li:before{position:static;display:block;margin:0 0 12px}
+
+  /* Study guide cards */
+  .guideGrid.swipe .guideCover{height:180px}
+
+  /* Two reference tables repeat the four rules: show a title, tap to open */
+  #reference .foldPhone{padding:18px 20px}
+  #reference .foldPhone>:not(h3){display:none}
+  #reference .foldPhone h3{margin:0}
+  #reference .foldPhone .foldNote{display:block;margin:6px 0 0;font-size:14px;color:#a5b4fc}
+  #reference .zoomBody .foldPhone>*{display:revert}
+  #reference .zoomBody .foldNote{display:none}
+
+  /* Teacher credentials: first four, then a button */
+  .credsFold:not(.open) li:nth-child(n+5){display:none}
+  .credsFold:not(.open) li:nth-child(4){border-bottom:0}
+  .credsFold{border-bottom-left-radius:0;border-bottom-right-radius:0;border-bottom:0}
+  .credsToggle{display:block;width:100%;margin:0;padding:14px;border:1px solid var(--line);border-radius:0 0 22px 22px;background:#fff;font:inherit;font-weight:600;color:var(--star-electric,#4f46e5);cursor:pointer}
+
+  /* Study guide library: shorter entries */
+  .libEntry>div>p:not(.libLinks){display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+}
+@media(max-width:640px) and (prefers-reduced-motion:reduce){.swipe{scroll-behavior:auto}}
