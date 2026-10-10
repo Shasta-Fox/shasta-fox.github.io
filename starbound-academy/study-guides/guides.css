@@ -73,3 +73,5 @@ body.libPage{background:var(--earth-canvas);color:var(--ink)}
 .libNote{background:#eef2ff;border-left:3px solid var(--star-electric);border-radius:0 12px 12px 0;padding:18px 22px;margin-bottom:48px;color:#344054;line-height:1.6}
 .libNote a{color:var(--star-electric);font-weight:700;text-decoration:underline}
 @media(max-width:620px){.libHead{padding-top:32px}.libCard{padding:18px}.libFilters button{flex:1 1 calc(50% - 8px)}}
+.t-poster{background:#fff7ed;color:#9a3412;border-color:#fed7aa}
+.t-curriculum{background:#eef2ff;color:#1e1b4b;border-color:#a5b4fc}
