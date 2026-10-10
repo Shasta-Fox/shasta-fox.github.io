@@ -1,0 +1,29 @@
+/* Study guide viewer */
+body.guidePage{background:#050a1c;color:#e5e7f2}
+.guideHead{padding:44px 0 18px}
+.refKicker{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:#a5b4fc}
+.guideHead h1{font-size:clamp(30px,4.5vw,48px);line-height:1.1;margin:10px 0 12px;letter-spacing:-.02em}
+.guideHead p{color:#c7cbe0;max-width:760px;line-height:1.7;margin:0 0 18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 20px;font-weight:850;background:var(--star-electric);color:#fff;border:0;cursor:pointer;font:inherit;font-weight:850}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.zoombar{position:sticky;top:70px;z-index:40;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px;background:rgba(5,10,28,.92);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+.zoombar button{min-width:44px;height:40px;border-radius:999px;border:1px solid rgba(165,180,252,.45);background:rgba(11,19,43,.9);color:#fff;font:inherit;font-weight:800;font-size:16px;padding:0 14px;cursor:pointer}
+.zoombar button:hover{border-color:#a5b4fc}
+.zoombar output{min-width:62px;text-align:center;font-weight:800;color:#e0e7ff}
+.pages{overflow-x:auto;padding:26px 16px 10px;-webkit-overflow-scrolling:touch}
+.pg{margin:0 auto 26px;width:max-content}
+.pg img{display:block;width:var(--pg-w,min(860px,calc(100vw - 32px)));height:auto;background:#fff;border-radius:4px;box-shadow:0 20px 50px rgba(0,0,0,.45);-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-user-drag:none}
+.viewerFoot{color:#aab0c8;font-size:14px;padding:0 0 48px;text-align:center}
+.printModal{position:fixed;inset:0;z-index:100;background:rgba(3,7,18,.72);display:grid;place-items:center;padding:20px}
+.printModal[hidden]{display:none}
+.printBox{max-width:460px;background:#0b132b;border:1px solid rgba(165,180,252,.5);border-radius:20px;padding:26px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.printBox h2{margin:0 0 10px;font-size:24px}
+.printBox p{color:#c7cbe0;line-height:1.6;margin:0 0 18px}
+.printNote{display:none}
+@media (max-width:900px){.zoombar{top:auto}}
+@media print{
+  body>*:not(.printNote){display:none!important}
+  .printNote{display:block!important;color:#000;font:16px/1.5 Georgia,serif;padding:40px}
+  body.guidePage{background:#fff}
+}
+.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;z-index:100;background:#fff;color:#111;padding:12px;border-radius:8px}
