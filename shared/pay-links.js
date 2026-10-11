@@ -9,7 +9,7 @@ var PAYPAL = {
   chef: ""                                 // Chef Rinaldi's cooking classes (buttons marked data-pay="chef")
 };
 var VENMO = {
-  shasta: "Shasta-Fox-2",
+  shasta: "",   // Off until the Venmo business profile @StarboundAcademy is verified; then put StarboundAcademy here
   chef: ""
 };
 
