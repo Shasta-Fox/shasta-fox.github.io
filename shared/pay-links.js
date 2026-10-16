@@ -65,6 +65,7 @@ var VENMO = {
       '.pay{display:flex;align-items:center;justify-content:center;min-height:48px;padding:12px 16px;border-radius:999px;font-size:16px;font-weight:800;text-decoration:none;letter-spacing:.01em}' +
       '.pp{background:#ffc439;color:#111}' +
       '.vm{background:#008cff;color:#fff}' +
+      '.pay[hidden]{display:none}' +
       '.pay:hover{filter:brightness(.95)}' +
       '.pay:focus-visible,.close:focus-visible,.notes a:focus-visible{outline:3px solid ' + accent + ';outline-offset:3px}' +
       '.notes{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:10px;font-size:14px;line-height:1.55;color:#344054}' +
@@ -165,3 +166,4 @@ var VENMO = {
     });
   });
 })();
+
