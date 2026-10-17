@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request a lesson | Starbound Academy</title>
+  <meta name="description" content="Request online tutoring or a small-group course with Shasta Fox. Share your subject, time zone, and preferred times. Confirm the schedule and tuition before paying.">
+  <link rel="canonical" href="https://shasta-fox.github.io/starbound-academy/request.html">
+  <style>
+    :root{color-scheme:light;--ink:#20263d;--muted:#586174;--purple:#4f46e5;--line:#d8dce9;--soft:#f1f0ff}
+    *{box-sizing:border-box}body{margin:0;background:#f7f8fc;color:var(--ink);font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:#4338ca;text-underline-offset:3px}button,input,select,textarea{font:inherit}button,a,input,select,textarea{touch-action:manipulation}
+    :focus-visible{outline:3px solid #7c3aed;outline-offset:3px}[hidden]{display:none!important}.shell{max-width:1120px;margin:auto;padding:0 24px}
+    header{background:#fff;border-bottom:1px solid var(--line)}header .shell{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:76px}
+    .brand{color:#282263;font-size:15px;line-height:1.25;letter-spacing:.07em;font-weight:850;text-decoration:none}.back{font-size:14px;font-weight:650}
+    main{padding:48px 0 64px}.layout{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:start;gap:40px}
+    .eyebrow{margin:0 0 12px;color:#5b45b9;font-size:13px;letter-spacing:.07em;text-transform:uppercase;font-weight:800}
+    h1{margin:0;font-size:clamp(34px,4.8vw,52px);line-height:1.1;letter-spacing:-.04em}h2{font-size:24px;line-height:1.25;letter-spacing:-.02em;margin:0 0 18px}
+    .lead{font-size:18px;color:#4b546c;line-height:1.65;margin:20px 0 24px}.steps{padding-left:23px}.steps li{padding:0 0 12px 4px}.steps strong{display:block}
+    .offer{border:1px solid #d9d3ff;background:var(--soft);border-radius:18px;padding:22px;margin:28px 0}.offer h2{font-size:19px;margin-bottom:10px}.offer p{margin:8px 0;font-size:15px}.offer strong{color:#352b90}
+    .contact{font-size:15px;color:var(--muted)}.contact a{display:inline-block}.card{padding:30px;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 14px 40px #20263d0b}
+    .note,.help{font-size:14px;line-height:1.5;color:var(--muted)}.note{margin:0 0 24px}.field{margin:0 0 22px}label,legend{display:block;font-size:15px;font-weight:700;margin-bottom:7px}
+    input:not([type=radio]),select,textarea{display:block;width:100%;min-height:48px;padding:11px 12px;border:1px solid #b8bfd1;border-radius:10px;background:#fff;color:var(--ink);font-size:16px}
+    textarea{min-height:112px;resize:vertical}input[type=email]{overflow-wrap:anywhere}.help{display:block;margin:7px 0 0}.optional{font-weight:400;color:var(--muted)}
+    fieldset{border:0;padding:0;margin:0 0 22px;min-width:0}.choices{display:grid;gap:8px}.choice{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font-weight:500;margin:0}.choice input{margin:6px 0 0;width:18px;height:18px;accent-color:var(--purple);flex:0 0 auto}
+    .price{background:#f5f4ff;border-radius:12px;padding:15px;margin:0 0 22px}.price strong{display:block;color:#393096;font-size:18px}.price span{display:block;font-size:14px;color:#586174;margin-top:4px}
+    .actions{display:flex;gap:10px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;border:1px solid transparent;border-radius:12px;background:var(--purple);color:#fff;font-weight:750;text-decoration:none;cursor:pointer;text-align:center}
+    .secondary{background:#fff;color:#4338ca;border-color:#b9b3ef}.review{margin-top:26px;padding-top:25px;border-top:1px solid var(--line)}.review p{margin:0 0 16px}.review textarea{min-height:280px;font-size:14px;line-height:1.55;margin-bottom:18px}
+    .status{margin:12px 0 0;font-size:14px;color:#4338ca;min-height:22px}.privacy{font-size:13px;line-height:1.6;color:var(--muted);margin:16px 0 0}footer{font-size:13px;color:var(--muted);padding:0 0 28px}.sr-only{position:absolute;clip:rect(0,0,0,0);width:1px;height:1px;overflow:hidden}
+    @media(max-width:820px){main{padding-top:30px}.layout{grid-template-columns:1fr;gap:22px}.offer{margin:22px 0}.lead{margin:16px 0}.steps{margin-bottom:12px}}
+    @media(max-width:480px){.shell{padding:0 16px}.card{padding:22px 18px;border-radius:18px}header .shell{gap:14px;min-height:70px}.brand{max-width:160px;font-size:13px}.back{font-size:13px}.button{width:100%}.offer{padding:18px}h1{font-size:36px}}
+  </style>
+</head>
+<body>
+  <header><div class="shell"><a class="brand" href="./">STARBOUND ACADEMY</a><a class="back" href="./#courses">Explore the courses</a></div></header>
+  <main class="shell">
+    <div class="layout">
+      <section aria-labelledby="page-title">
+        <p class="eyebrow">Online · With Shasta Fox</p>
+        <h1 id="page-title">Let’s plan your next lesson.</h1>
+        <p class="lead">Tell me what you want to learn and when you can meet. We’ll agree on the schedule and tuition before you pay.</p>
+        <ol class="steps">
+          <li><strong>Share your subject and preferred times.</strong>Choose a lesson or course and include your time zone.</li>
+          <li><strong>Confirm the plan by email.</strong>Shasta confirms availability, the lesson or course plan, and your exact tuition.</li>
+          <li><strong>Pay after confirmation.</strong>Use the payment link in your confirmation. Your Zoom details follow from Shasta.</li>
+        </ol>
+        <div class="offer">
+          <h2>Tuition support for enrolled tribal members</h2>
+          <p><strong>$15</strong> per 50-minute individual tutoring session.</p>
+          <p><strong>$80</strong> per Math for Science course, or <strong>$200</strong> for the complete four-course sequence.</p>
+          <p>Other intensive group classes are 65% off regular tuition, rounded down to the nearest $10. Ask Shasta about full tuition support based on financial need.</p>
+          <p>No tribal ID, benefit documents, or financial records are needed in this request.</p>
+        </div>
+        <p class="contact">Prefer to get in touch directly?<br><a href="mailto:shastaandziggy@gmail.com">shastaandziggy@gmail.com</a><br><a href="tel:+18082094223">808-209-4223</a></p>
+      </section>
+      <section class="card" aria-labelledby="request-title">
+        <h2 id="request-title">Request a lesson or course</h2>
+        <p class="note">Group programs launch January 10, 2027. Meeting times are arranged with your group. This request does not reserve a seat or charge you.</p>
+        <noscript><p>Please email <a href="mailto:shastaandziggy@gmail.com?subject=Starbound%20Academy%20lesson%20request">shastaandziggy@gmail.com</a> with your subject, time zone, and two or three preferred times. Shasta will confirm the schedule and tuition before you pay.</p></noscript>
+        <form id="lesson-request">
+          <fieldset><legend>Who is making this request?</legend><div class="choices">
+            <label class="choice"><input type="radio" name="role" value="Adult learner" required>I am an adult learner</label>
+            <label class="choice"><input type="radio" name="role" value="Parent or guardian" required>I am a parent or guardian</label>
+          </div></fieldset>
+          <div class="field"><label for="contact-name">Your name</label><input id="contact-name" name="contact-name" autocomplete="name" maxlength="100" required></div>
+          <div class="field"><label for="contact-email">Your email</label><input id="contact-email" name="contact-email" type="email" autocomplete="email" maxlength="200" required></div>
+          <div class="field"><label for="learner-name">Learner’s first name <span class="optional">(optional)</span></label><input id="learner-name" name="learner-name" maxlength="60" autocomplete="off"></div>
+          <div class="field"><label for="service">What would you like to study?</label><select id="service" name="service" required>
+            <option value="tutoring">Individual tutoring or writing support · 50 minutes</option>
+            <option value="math-1">Math for Science 1 · Numbers &amp; Measurement</option>
+            <option value="math-2">Math for Science 2 · Algebra &amp; Scientific Notation</option>
+            <option value="math-3">Math for Science 3 · Graphs &amp; Scientific Models</option>
+            <option value="math-4">Math for Science 4 · Geometry &amp; Trigonometry</option>
+            <option value="math-bundle">Math for Science · Complete four-course sequence</option>
+            <option value="algebra">Algebra Demystified · Weekend workshop</option>
+            <option value="mental-math">Mental Math Workshop</option>
+            <option value="socrates">From Socrates to Kuhn</option>
+            <option value="esl-speaking">ESL speaking course</option>
+            <option value="esl-grammar-50">ESL grammar · 50 minutes</option>
+            <option value="esl-grammar-30">ESL grammar · 30 minutes</option>
+            <option value="other">Help me choose</option>
+          </select></div>
+          <div class="field"><label for="tuition">Tuition</label><select id="tuition" name="tuition"><option value="regular">Regular tuition</option><option value="tribal">Enrolled tribal member offer</option><option value="discuss">Discuss tuition support with Shasta</option></select></div>
+          <p class="price" aria-live="polite"><strong id="price-label"></strong><span id="price-note">Shasta confirms your exact tuition before you pay.</span></p>
+          <div class="field"><label for="goal">Your subject and learning goal</label><textarea id="goal" name="goal" maxlength="600" required placeholder="For example: I want to get more comfortable rearranging formulas in my chemistry class."></textarea><span class="help">Include a level or grade if useful. Please keep medical, financial, and identity documents out of this request.</span></div>
+          <div class="field"><label for="timezone">Your time zone</label><input id="timezone" name="timezone" maxlength="80" required placeholder="For example: America/Denver or Mountain Time"><span class="help">Check the time zone below before sending your request.</span></div>
+          <fieldset><legend>Two or three times that work for you</legend><p class="help" style="margin:0 0 12px">Include the date and a time or time range for each. These are your preferences; Shasta will confirm availability.</p>
+            <div class="field"><label for="time-1">First choice</label><input id="time-1" name="time-1" maxlength="100" required placeholder="Date · time or time range"></div>
+            <div class="field"><label for="time-2">Second choice</label><input id="time-2" name="time-2" maxlength="100" required placeholder="Date · time or time range"></div>
+            <div class="field" style="margin-bottom:0"><label for="time-3">Third choice <span class="optional">(optional)</span></label><input id="time-3" name="time-3" maxlength="100" placeholder="Date · time or time range"></div>
+          </fieldset>
+          <button class="button" type="submit">Review my email request</button>
+          <p class="privacy">This prepares an email for you to send. Your entries stay in this page until you choose to open or copy the email; they are not saved by the website.</p>
+        </form>
+        <section class="review" id="review" hidden aria-labelledby="review-title" tabindex="-1">
+          <h2 id="review-title">Your request is ready to send</h2>
+          <p class="note">Review your request, then open your email app and press Send there. Shasta receives it only after you send it.</p>
+          <label for="email-preview">Email to Shasta Fox</label><textarea id="email-preview" readonly></textarea>
+          <div class="actions"><a class="button" id="open-email" href="mailto:shastaandziggy@gmail.com">Open email draft</a><button class="button secondary" id="copy-email" type="button">Copy request</button></div>
+          <p class="status" id="copy-status" role="status" aria-live="polite"></p>
+          <p class="privacy">If your email app does not open, copy this request into an email to <a href="mailto:shastaandziggy@gmail.com">shastaandziggy@gmail.com</a>. This page does not confirm a booking or payment.</p>
+        </section>
+      </section>
+    </div>
+  </main>
+  <footer class="shell">Starbound Academy · Online tutoring and small-group learning with Shasta Fox</footer>
+  <script>
+  (function () {
+    'use strict';
+    var services = {
+      'tutoring': {name:'Individual tutoring or writing support', regular:40, tribal:15, unit:'per 50-minute session'},
+      'math-1': {name:'Math for Science 1: Numbers & Measurement', regular:250, tribal:80, unit:'for this course'},
+      'math-2': {name:'Math for Science 2: Algebra & Scientific Notation', regular:250, tribal:80, unit:'for this course'},
+      'math-3': {name:'Math for Science 3: Graphs & Scientific Models', regular:250, tribal:80, unit:'for this course'},
+      'math-4': {name:'Math for Science 4: Geometry & Trigonometry', regular:250, tribal:80, unit:'for this course'},
+      'math-bundle': {name:'Math for Science: Complete four-course sequence', regular:900, tribal:200, unit:'for all four courses'},
+      'algebra': {name:'Algebra Demystified', regular:120, tribal:40, unit:'for the weekend workshop'},
+      'mental-math': {name:'Mental Math Workshop', regular:60, tribal:20, unit:'for the workshop'},
+      'socrates': {name:'From Socrates to Kuhn', regular:150, tribal:50, unit:'for all six sessions'},
+      'esl-speaking': {name:'ESL speaking course', regular:192, tribal:60, unit:'for the eight-week course'},
+      'esl-grammar-50': {name:'ESL grammar: 50-minute lesson', regular:45, unit:'per 50-minute lesson'},
+      'esl-grammar-30': {name:'ESL grammar: 30-minute lesson', regular:25, unit:'per 30-minute lesson'},
+      'other': {name:'Help choosing a lesson or course'}
+    };
+    var el = function(id) { return document.getElementById(id); };
+    var form = el('lesson-request');
+    function tuitionLabel() {
+      var service = services[el('service').value], rate = el('tuition').value;
+      var amount = rate === 'tribal' ? service.tribal : service.regular;
+      if (rate === 'discuss') return 'Please discuss tuition support with Shasta';
+      if (typeof amount !== 'number') return 'Shasta will confirm tuition with you';
+      return '$' + amount + ' ' + service.unit;
+    }
+    function updatePrice() { el('price-label').textContent = tuitionLabel(); }
+    var params = new URLSearchParams(window.location.search);
+    var requested = params.get('service');
+    if (Object.prototype.hasOwnProperty.call(services, requested)) el('service').value = requested;
+    if (params.get('tuition') === 'tribal') el('tuition').value = 'tribal';
+    try { el('timezone').value = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+    el('service').addEventListener('change', updatePrice);
+    el('tuition').addEventListener('change', updatePrice);
+    updatePrice();
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      var role = form.querySelector('input[name="role"]:checked').value;
+      var service = services[el('service').value];
+      var rate = el('tuition');
+      var lines = [
+        'Hello Shasta,', '', 'I would like to request a lesson or course.', '',
+        'Contact: ' + el('contact-name').value.trim(),
+        'Reply email: ' + el('contact-email').value.trim(),
+        'I am the: ' + role,
+        'Learner first name: ' + (el('learner-name').value.trim() || 'Not provided'),
+        'Lesson/course: ' + service.name,
+        'Tuition option: ' + rate.options[rate.selectedIndex].text,
+        'Tuition to confirm: ' + tuitionLabel(), '',
+        'Subject and goal: ' + el('goal').value.trim(), '',
+        'Time zone: ' + el('timezone').value.trim(),
+        'Preferred time 1: ' + el('time-1').value.trim(),
+        'Preferred time 2: ' + el('time-2').value.trim()
+      ];
+      if (el('time-3').value.trim()) lines.push('Preferred time 3: ' + el('time-3').value.trim());
+      lines.push('', 'Please confirm availability, the learning plan, and exact tuition before I pay.', '', 'Thank you,', el('contact-name').value.trim());
+      var body = lines.join('\n');
+      el('email-preview').value = body;
+      el('open-email').href = 'mailto:shastaandziggy@gmail.com?subject=' + encodeURIComponent('Starbound request: ' + service.name) + '&body=' + encodeURIComponent(body);
+      el('copy-status').textContent = '';
+      el('review').hidden = false;
+      el('review').focus();
+      el('review').scrollIntoView({block:'start',behavior:'smooth'});
+    });
+    form.addEventListener('input', function() { el('review').hidden = true; });
+    form.addEventListener('change', function() { el('review').hidden = true; });
+    el('copy-email').addEventListener('click', function() {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(el('email-preview').value).then(function() {
+          el('copy-status').textContent = 'Copied. Paste the request into an email to shastaandziggy@gmail.com.';
+        }).catch(selectForCopy);
+      } else selectForCopy();
+    });
+    function selectForCopy() {
+      el('email-preview').focus(); el('email-preview').select();
+      el('copy-status').textContent = 'Your request is selected. Copy it and paste it into an email to shastaandziggy@gmail.com.';
+    }
+  })();
+  </script>
+</body>
+</html>
